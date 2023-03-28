@@ -3,10 +3,10 @@
 function randomThumb() {
     var image = new Array();
     //Add hình vào mảng
-    image.push("/BackupData/IMG/At_Least_There's_A_Moment_Of_Peace.jpg")
-    image.push("/BackupData/IMG/Determination_Ignited.jpg")
-    image.push("/BackupData/IMG/Recreational_Shopping.jpg")
-    image.push("/BackupData/IMG/Determination_Ignited_T.jpg")
+    image.push("BackupData/IMG/At_Least_There's_A_Moment_Of_Peace.jpg")
+    image.push("BackupData/IMG/Determination_Ignited.jpg")
+    image.push("BackupData/IMG/Recreational_Shopping.jpg")
+    image.push("BackupData/IMG/Determination_Ignited_T.jpg")
 
     //Xử lý hình ảnh
     var ranIndex = Math.floor(Math.random() * image.length)
