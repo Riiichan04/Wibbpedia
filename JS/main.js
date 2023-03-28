@@ -38,7 +38,7 @@ function randomThumb() {
     document.getElementById("gachaparagraph").style.width = "100%"
     document.getElementById("gachaparagraph").style.height = "100%"
 }
-
+//Minikoma
 function random4koma() {
     var pjsk4koma = new Array()
     for (var i = 0; i < 99; i++) {
@@ -51,6 +51,19 @@ function random4koma() {
     document.getElementById("gacha4koma").style.height = "100%"
 }
 
+function random1koma() {
+    var pjsk1koma = new Array()
+    for (var i = 0; i < 40; i++) {
+        pjsk1koma.push(`BackupData/IMG/1koma/1koma${i}.jpg`)
+    }
+    var index1koma = Math.floor(Math.random()*pjsk1koma.length)
+    var ran1koma = pjsk1koma[index1koma]
+    document.getElementById("gacha1koma").src = ran1koma
+    document.getElementById("gacha1koma").style.width = "100%"
+    document.getElementById("gacha1koma").style.height = "100%"
+}
+
+//Music
 var musicList = new Array()
 musicList.push("./BackupData/Audio/Kirari.mp3")
 musicList.push("./BackupData/Audio/NIGHTDANCER_DAZBEEcover.mp3")
@@ -117,5 +130,6 @@ prevMusic.addEventListener("click", () => {
 
 
 randomThumb()
+random1koma()
 random4koma()
 randomMusic()
