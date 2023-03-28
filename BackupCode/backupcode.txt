@@ -1,0 +1,51 @@
+<!-- Mượn code-->
+        <div>
+            <div class="musicplayer">
+                <div class="music">
+                    <div id="player">
+                        <div id="player-track">
+                            <div id="album-name"></div>
+                            <div id="track-name"></div>
+                            <div id="track-time">
+                                <div id="current-time"></div>
+                                <div id="track-length"></div>
+                            </div>
+                            <div id="s-area">
+                                <div id="ins-time"></div>
+                                <div id="s-hover"></div>
+                                <div id="seek-bar"></div>
+                            </div>
+                        </div>
+                        <div id="player-content">
+                            <div id="album-art">
+                                <img src="./BackupData/IMG/audioIMG/kirari.png"
+                                    class="active" id="_1">
+                                <div id="buffer-box">Đang tải ... Chờ tí nhé!!!</div>
+                            </div>
+                            <div id="player-controls">
+                                <div class="control">
+                                    <div class="button" id="play-previous">
+                                        <i class="fas fa-backward"></i>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <div class="button" id="play-pause-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <div class="button" id="play-next">
+                                        <i class="fas fa-forward"></i>
+                                    </div>
+                                    <div class="vol">
+                                        <i class="vol-icon fa-solid fa-volume-high" id="vol-up"></i>
+                                        <p id="currvol"> 5</p>
+                                        <i class="vol-icon fa-solid fa-volume-low" id="vol-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
