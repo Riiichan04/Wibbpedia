@@ -56,7 +56,7 @@ function random1koma() {
     for (var i = 0; i < 40; i++) {
         pjsk1koma.push(`BackupData/IMG/1koma/1koma${i}.jpg`)
     }
-    var index1koma = Math.floor(Math.random()*pjsk1koma.length)
+    var index1koma = Math.floor(Math.random() * pjsk1koma.length)
     var ran1koma = pjsk1koma[index1koma]
     document.getElementById("gacha1koma").src = ran1koma
     document.getElementById("gacha1koma").style.width = "100%"
@@ -90,9 +90,11 @@ function randomMusic() {
     document.getElementById("nameMusic").innerHTML = `Đang phát ${nameAlbum[ranIndex]}`
 }
 
+var musicPlay = document.getElementById("musicPlay")
 var musicButton = document.getElementById("randomMusic")
 var nextMusic = document.getElementById("nextMusic")
 var prevMusic = document.getElementById("prevMusic")
+var pauseMusic = document.getElementById("pauseMusic")
 
 //MusicBox
 musicButton.addEventListener("click", () => {
@@ -128,7 +130,49 @@ prevMusic.addEventListener("click", () => {
     document.getElementById("nameMusic").innerHTML = `Đang phát ${nameAlbum[ranIndex]}`
 })
 
+pauseMusic.addEventListener("click", () => {
+    if (musicPlay.paused) {
+        musicPlay.play()
+        pauseMusic.className = "fa-solid fa-pause"
+        document.getElementById("nameMusic").innerHTML = `Đang phát ${nameAlbum[ranIndex]}`
+    }
+    else {
+        musicPlay.pause()
+        pauseMusic.className = "fa-solid fa-play"
+        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng ${nameAlbum[ranIndex]}`
+    }
+})
 
+//Làm ProgressBar
+function formatDuration(duration) {
+    const minutes = Math.floor(duration / 60);
+    const seconds = Math.floor(duration % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+var progressBar = document.getElementById("progressMusic")
+musicPlay.addEventListener('loadeddata', () => {
+    var duration = musicPlay.duration
+    progressBar.innerHTML = `0:00/${formatDuration(duration)}`
+})
+musicPlay.addEventListener('timeupdate', () => {
+    var currentTime = musicPlay.currentTime
+    var duration = musicPlay.duration
+    progressBar.innerHTML = `${formatDuration(currentTime)}/${formatDuration(duration)}`
+})
+
+//Check ban đầu đã nhấn play chưa
+function checkPlayedMusic() {
+    if (!musicPlay.played) {
+        pauseMusic.className = "fa-solid fa-pause"
+        // document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
+    }
+    else {
+        pauseMusic.className = "fa-solid fa-play"
+        // document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
+    }
+}
+
+checkPlayedMusic()
 randomThumb()
 random1koma()
 random4koma()

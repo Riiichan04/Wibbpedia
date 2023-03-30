@@ -84,7 +84,7 @@
 }
 
 /* Thành phần trên mainframe */
-    /* Hiển Thị Hình Ảnh + Bài Viết */
+/* Hiển Thị Hình Ảnh + Bài Viết */
 .thumbinfo {
     border-radius: 10px;
     border-width: 5px;
@@ -95,15 +95,16 @@
     float: left
 }
 
-    /* Hiển Thị 4koma */
+/* Hiển Thị 4koma */
 .mangainfo {
     float: right;
     height: 20%;
     width: 20%;
 }
+
 .p4komainfo {
     background-color: rgba(155, 155, 155, 0.196);
-    
+
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -142,6 +143,7 @@
     width: 100%;
     font-size: 22px;
 }
+
 #prevMusic {
     background-color: blueviolet;
     color: wheat;
@@ -149,6 +151,7 @@
     font-size: 25px;
     display: inline-block
 }
+
 #nextMusic {
     background-color: blueviolet;
     color: wheat;
@@ -157,7 +160,21 @@
     display: inline-block;
 }
 
-    /* Hiển thị Tin Tức */
+#pauseMusic {
+    background-color: blueviolet;
+    color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block;
+}
+
+#progressMusic {
+    width: 50%;
+    font-size: 18px;
+    margin-left: 40%;
+}
+
+/* Hiển thị Tin Tức */
 
 .RandomNews {
     display: grid;
@@ -173,13 +190,14 @@
     border-radius: 5px;
     font-size: 23px;
     color: rgb(240, 240, 240);
-    padding-top: 5%;  
+    padding-top: 5%;
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .infonews {
     margin-bottom: 0;
-    margin-top:5px;
+    margin-top: 5px;
     text-decoration: none;
     color: black
 }
