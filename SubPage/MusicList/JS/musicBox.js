@@ -111,11 +111,9 @@ musicPlay.addEventListener("load", () => {
 function checkPlayedMusic() {
     if (!musicPlay.played) {
         pauseMusic.className = "fa-solid fa-pause"
-        // document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
     }
     else {
         pauseMusic.className = "fa-solid fa-play"
-        // document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
     }
 }
 randomMusic()
