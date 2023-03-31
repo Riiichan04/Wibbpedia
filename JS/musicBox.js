@@ -100,7 +100,10 @@ musicPlay.addEventListener('timeupdate', () => {
     var duration = musicPlay.duration
     progressBar.innerHTML = `${formatDuration(currentTime)}/${formatDuration(duration)}`
 })
-
+musicPlay.addEventListener('ended', () => {
+    pauseMusic.className = "fa-solid fa-play"
+    document.getElementById("nameMusic").innerHTML = `Đã phát xong: ${nameAlbum[ranIndex]}`
+})
 //Check ban đầu đã nhấn play chưa
 function checkPlayedMusic() {
     if (!musicPlay.played) {
