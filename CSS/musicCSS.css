@@ -1,4 +1,12 @@
 /* Music Box Mini */
+.mainMusicFrame {
+    border-radius: 10px;
+    width: 75vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 200px;
+    margin-left: 10vw;
+}
+
 
 .musicMini {
     border-radius: 10px;
@@ -6,6 +14,18 @@
     border-style: dashed;
     border-color: aquamarine;
     background-color: rgba(155, 155, 155, 0.196);
+}
+
+.musicType {
+    font-size: 20px;
+    display: flex;
+}
+.countryMusic {
+    width: 50%;
+    color: blueviolet;
+    border-radius: 3px;
+    border: solid;
+    border-color: rgb(0, 255, 128);
 }
 
 .musicOperator {
@@ -54,5 +74,9 @@
 
 #progressMusic {
     width: 50%;
+    font-size: 18px;
+}
+
+#JPName {
     font-size: 18px;
 }
