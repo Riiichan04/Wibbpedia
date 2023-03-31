@@ -42,30 +42,32 @@ musicButton.addEventListener("click", () => {
     // }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${nameAlbum[ranIndex]}`
 
 
 })
 
 nextMusic.addEventListener("click", () => {
+    progressBar.innerHTML = `Đang chuyển bài, chờ tí nhé!!`
     ranIndex++
     if (ranIndex >= musicList.length) {
         ranIndex = 0
     }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${nameAlbum[ranIndex]}`
     pauseMusic.className = "fa-solid fa-play"
 })
 
 prevMusic.addEventListener("click", () => {
+    progressBar.innerHTML = `Đang chuyển bài, chờ tí nhé!!`
     ranIndex--
     if (ranIndex < 0) {
         ranIndex = musicList.length - 1
     }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Đang phát ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đang phát: ${nameAlbum[ranIndex]}`
     pauseMusic.className = "fa-solid fa-play"
 })
 
@@ -73,12 +75,12 @@ pauseMusic.addEventListener("click", () => {
     if (musicPlay.paused) {
         musicPlay.play()
         pauseMusic.className = "fa-solid fa-pause"
-        document.getElementById("nameMusic").innerHTML = `Đang phát ${nameAlbum[ranIndex]}`
+        document.getElementById("nameMusic").innerHTML = `Đang phát: ${nameAlbum[ranIndex]}`
     }
     else {
         musicPlay.pause()
         pauseMusic.className = "fa-solid fa-play"
-        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng ${nameAlbum[ranIndex]}`
+        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: ${nameAlbum[ranIndex]}`
     }
 })
 
