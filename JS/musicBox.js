@@ -124,6 +124,5 @@ function checkPlayedMusic() {
         // document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát ${nameAlbum[ranIndex]}`
     }
 }
-
 randomMusic()
 checkPlayedMusic()
