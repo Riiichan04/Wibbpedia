@@ -122,5 +122,26 @@ function checkPlayedMusic() {
         pauseMusic.className = "fa-solid fa-play"
     }
 }
+//Add List Tên Nhạc 
+function addJPName() {
+    var jpName = document.getElementById("JPMusic")
+    for (var i = 0; i < musicList.length; i++) {
+        var btnName = document.createElement("p")
+        btnName.id = `JPName`
+        btnName.innerHTML = nameAlbum[i]
+        jpName.appendChild(btnName)
+    }
+}
+
+//Làm Tên Nhạc có thể chơi nhạc
+// document.getElementById("JPName").addEventListener("click", () => {
+    // for (var i = 0; i < nameAlbum.length; i++) {
+    //     if ()
+    // }
+    // musicPlay.src = musicList[i]
+    // musicPlay.play()
+// })
+
+addJPName()
 randomMusic()
 checkPlayedMusic()
