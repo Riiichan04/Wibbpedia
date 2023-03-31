@@ -1,0 +1,59 @@
+/* Music Box Mini */
+
+.musicMini {
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: aquamarine;
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+.musicOperator {
+    display: flex
+}
+
+#musicPlay {
+    width: 100%;
+}
+
+#nameMusic {
+    font-size: 17px;
+
+}
+
+#randomMusic {
+    background-color: blueviolet;
+    color: wheat;
+    width: 100%;
+    font-size: 22px;
+}
+
+#prevMusic {
+    background-color: blueviolet;
+    color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block
+}
+
+#nextMusic {
+    background-color: blueviolet;
+    color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block;
+}
+
+#pauseMusic {
+    background-color: blueviolet;
+    color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block;
+}
+
+#progressMusic {
+    width: 50%;
+    font-size: 18px;
+    margin-left: 40%;
+}
