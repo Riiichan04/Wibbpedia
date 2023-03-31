@@ -104,6 +104,9 @@ musicPlay.addEventListener('ended', () => {
     pauseMusic.className = "fa-solid fa-play"
     document.getElementById("nameMusic").innerHTML = `Đã phát xong: ${nameAlbum[ranIndex]}`
 })
+musicPlay.addEventListener("load", () => {
+    progressBar.innerHTML = `Đang chuyển bài, chờ tí nhé!!`
+})
 //Check ban đầu đã nhấn play chưa
 function checkPlayedMusic() {
     if (!musicPlay.played) {
