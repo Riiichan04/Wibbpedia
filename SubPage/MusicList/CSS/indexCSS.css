@@ -1,0 +1,145 @@
+.body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainbg {
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    background-image: url("https://cutewallpaper.org/22/anime-setting-wallpapers/1083114127.jpg"), url("https://cdn.discordapp.com/attachments/1069352694554312704/1069352701881761803/775137.gif");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+}
+
+/* .mainbg {
+    height:100vh;
+    width: 100vw;
+    background-color: gray;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://cdn.discordapp.com/attachments/1069352694554312704/1069352701881761803/775137.gif"), url("https://cutewallpaper.org/22/anime-setting-wallpapers/1083114127.jpg");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center bottom, center top;
+} */
+
+/* Thanh Header */
+.header {
+    width: 100vw;
+    height: 65px;
+    background-color: rgb(0, 255, 187);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.75;
+}
+
+.headlist {
+    padding-left: 0;
+    margin: auto 20px;
+}
+
+.headlistitem {
+    font-size: 22px;
+    list-style: none;
+    margin: 0 10px;
+    display: inline;
+    color: orangered;
+}
+
+.headlistitem_item {
+    text-decoration: none;
+    color: rgb(157, 0, 255);
+}
+
+/* Phần Chính Của Web */
+.frame {
+    display: flex;
+}
+
+.mainframe {
+    border-radius: 10px;
+    width: 75vw;
+    background-color: white;
+    margin-top: 200px;
+    margin-left: 10vw;
+}
+
+
+.webtitle {
+    font-size: 40px;
+}
+
+.title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-left: 30px;
+    color: rgb(0, 242, 255);
+    border-color: rgb(246, 0, 156);
+    background-image: url("https://cdn.discordapp.com/attachments/1069352694554312704/1089949680974172290/TitleWeb.png");
+}
+
+/* Thành phần trên mainframe */
+/* Hiển Thị Hình Ảnh + Bài Viết */
+.thumbinfo {
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    width: 28vi;
+    border-color: aquamarine;
+    background-color: rgba(155, 155, 155, 0.196);
+    float: left
+}
+
+/* Hiển Thị 4koma */
+.mangainfo {
+    float: right;
+    height: 20%;
+    width: 20%;
+}
+
+.p4komainfo {
+    background-color: rgba(155, 155, 155, 0.196);
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: double;
+    /* float: right */
+}
+
+
+
+/* Hiển thị Tin Tức */
+
+.RandomNews {
+    display: grid;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    border-color: aquamarine;
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+.titlenews {
+    background-image: linear-gradient(to bottom right, rgb(212, 0, 255), rgb(0, 150, 204), rgb(3, 255, 205));
+    border-radius: 5px;
+    font-size: 23px;
+    color: rgb(240, 240, 240);
+    padding-top: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.infonews {
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black
+}
