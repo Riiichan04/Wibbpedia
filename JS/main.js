@@ -63,9 +63,6 @@ function random1koma() {
     document.getElementById("gacha1koma").style.height = "100%"
 }
 
-
-
-
 randomThumb()
 random1koma()
 random4koma()
