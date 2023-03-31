@@ -61,7 +61,7 @@
 .mainframe {
     border-radius: 10px;
     width: 75vw;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     margin-top: 200px;
     margin-left: 10vw;
 }
@@ -86,13 +86,12 @@
 /* Thành phần trên mainframe */
 /* Hiển Thị Hình Ảnh + Bài Viết */
 .thumbinfo {
-    border-radius: 10px;
-    border-width: 5px;
-    border-style: double;
-    width: 28vi;
-    border-color: aquamarine;
+    /* border-radius: 10px; */
+    /* border-width: 5px; */
+    /* border-style: double; */
+    width: 100%;
+    /* border-color: aquamarine; */
     background-color: rgba(155, 155, 155, 0.196);
-    float: left
 }
 
 /* Hiển Thị 4koma */

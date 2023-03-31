@@ -7,6 +7,17 @@
     border-color: aquamarine;
     background-color: rgba(155, 155, 155, 0.196);
 }
+.musicType {
+    font-size: 20px;
+    display: flex;
+}
+.countryMusic {
+    width: 50%;
+    color: blueviolet;
+    border-radius: 3px;
+    border: solid;
+    border-color: rgb(0, 255, 128);
+}
 
 .musicOperator {
     display: flex

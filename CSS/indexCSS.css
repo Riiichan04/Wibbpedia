@@ -61,7 +61,7 @@
 .mainframe {
     border-radius: 10px;
     width: 75vw;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     margin-top: 200px;
     margin-left: 10vw;
 }
