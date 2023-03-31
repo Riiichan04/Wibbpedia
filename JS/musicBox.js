@@ -125,6 +125,5 @@ function checkPlayedMusic() {
     }
 }
 
-
 randomMusic()
 checkPlayedMusic()
