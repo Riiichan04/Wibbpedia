@@ -11,6 +11,12 @@ musicList.push("BackupData/Audio/ZamzaNiigoKaito.mp3")
 musicList.push("BackupData/Audio/HaruWoTsugeruYama.mp3")
 musicList.push("BackupData/Audio/OsmanthusAdo.mp3")
 musicList.push("BackupData/Audio/BloodFlowYama.mp3")
+musicList.push("BackupData/Audio/flosOkayu.mp3")
+musicList.push("BackupData/Audio/IkanaideOkayu.mp3")
+musicList.push("BackupData/Audio/KakuseiSuisei.mp3")
+musicList.push("BackupData/Audio/KataomoiAimer.mp3")
+musicList.push("BackupData/Audio/OnajiHanashi.mp3")
+
 
 var nameAlbum = new Array()
 nameAlbum.push("Kirari - Fujii Kaze")
@@ -24,6 +30,11 @@ nameAlbum.push("Zamza - Nightcord at 25h ft.KAITO")
 nameAlbum.push("Haru wo Tsugeru - Yama")
 nameAlbum.push("Osmanthus - Ado")
 nameAlbum.push("Blood Flow - Yama")
+nameAlbum.push("Flos - Nekomata Okayu Cover")
+nameAlbum.push("Ikanaide (Piano) - Nekomata Okayu Cover")
+nameAlbum.push("Kakusei - Suisei Cover")
+nameAlbum.push("Kataomoi - Aimer")
+nameAlbum.push("OnajiHanashi - Kain & Blanc Cover")
 
 var ranIndex = Math.floor(Math.random() * musicList.length)
 var ranMusic = musicList[ranIndex]
@@ -38,6 +49,7 @@ var musicButton = document.getElementById("randomMusic")
 var nextMusic = document.getElementById("nextMusic")
 var prevMusic = document.getElementById("prevMusic")
 var pauseMusic = document.getElementById("pauseMusic")
+var autoMusic = document.getElementById("autoMusic")
 
 //MusicBox
 musicButton.addEventListener("click", () => {
@@ -131,7 +143,7 @@ var progressTrue = document.getElementById("timingProgress")
 progressTrue.addEventListener("click", (e) => {
     var x = e.clientX - progressReal.offsetLeft
     var width = progressTrue.clientWidth
-    var percent = Math.floor((x/width)*100)
+    var percent = Math.floor((x / width) * 100)
     console.log(width)
     console.log(percent)
 
@@ -139,9 +151,9 @@ progressTrue.addEventListener("click", (e) => {
 
     if (!musicPlay.played) {
         musicPlay.play()
-        musicPlay.currentTime = (percent/100)*musicPlay.duration
+        musicPlay.currentTime = (percent / 100) * musicPlay.duration
     }
-    else musicPlay.currentTime = (percent/100)*musicPlay.duration
+    else musicPlay.currentTime = (percent / 100) * musicPlay.duration
 })
 randomMusic()
 checkPlayedMusic()

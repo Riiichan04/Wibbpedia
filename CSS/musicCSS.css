@@ -42,6 +42,14 @@
     font-size: 22px;
 }
 
+#autoMusic {
+    background-color: blueviolet;
+    color: wheat;
+    width: 25%;
+    font-size: 25px;
+    display: inline-block;
+}
+
 #prevMusic {
     background-color: blueviolet;
     color: wheat;
