@@ -105,6 +105,9 @@ musicPlay.addEventListener('timeupdate', () => {
     var currentTime = musicPlay.currentTime
     var duration = musicPlay.duration
     progressBar.innerHTML = `${formatDuration(currentTime)}/${formatDuration(duration)}`
+    var progressReal = document.getElementById("reallyProgress")
+    var progress = (currentTime/duration)*100
+    progressReal.style.width = progress + "%"
 })
 musicPlay.addEventListener('ended', () => {
     pauseMusic.className = "fa-solid fa-play"
