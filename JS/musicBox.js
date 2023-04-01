@@ -155,5 +155,32 @@ progressTrue.addEventListener("click", (e) => {
     }
     else musicPlay.currentTime = (percent / 100) * musicPlay.duration
 })
+//Làm nút tăng giảm âm lượng
+var volUp = document.getElementById("volUp")
+var volDown = document.getElementById("volDown")
+volUp.addEventListener("click", () => {
+    var currentVolume = document.getElementById("volValue").innerHTML
+    var volumeInt = parseInt(currentVolume)
+    if (volumeInt == 10) {
+        musicPlay.volume = 1
+    }
+    else {
+        musicPlay.volume = musicPlay.volume + 0.1
+        document.getElementById("volValue").innerHTML = ++volumeInt
+        console.log(volumeInt)
+    }
+})
+volDown.addEventListener("click", () => {
+    var currentVolume = document.getElementById("volValue").innerHTML
+    var volumeInt = parseInt(currentVolume)
+    if (volumeInt == 0) {
+        musicPlay.volume = 0
+    }
+    else {
+        musicPlay.volume = musicPlay.volume - 0.1
+        document.getElementById("volValue").innerHTML = --volumeInt
+        console.log(volumeInt)
+    }
+})
 randomMusic()
 checkPlayedMusic()

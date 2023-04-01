@@ -7,7 +7,6 @@
     margin-left: 10vw;
 }
 
-
 .musicMini {
     border-radius: 10px;
     border-width: 5px;
@@ -20,7 +19,6 @@
     font-size: 20px;
     display: flex;
 }
-
 
 .musicOperator {
     display: flex
@@ -35,47 +33,21 @@
 
 }
 
-#randomMusic {
+/* Các nút nhạc */
+#prevMusic, #nextMusic, #pauseMusic, #randomMusic {
     background-color: blueviolet;
     color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block;
+    border: solid
+}
+#randomMusic {
     width: 100%;
     font-size: 22px;
 }
-
-#autoMusic {
-    background-color: blueviolet;
-    color: wheat;
-    width: 25%;
-    font-size: 25px;
-    display: inline-block;
-}
-
-#prevMusic {
-    background-color: blueviolet;
-    color: wheat;
-    width: 50%;
-    font-size: 25px;
-    display: inline-block
-}
-
-#nextMusic {
-    background-color: blueviolet;
-    color: wheat;
-    width: 50%;
-    font-size: 25px;
-    display: inline-block;
-}
-
-#pauseMusic {
-    background-color: blueviolet;
-    color: wheat;
-    width: 50%;
-    font-size: 25px;
-    display: inline-block;
-}
-
+/* Thanh progress */
 #progressMusic {
-    width: 50%;
     font-size: 18px;
 }
 
@@ -84,10 +56,36 @@
     height: 3vh;
     background-color: rgb(0, 171, 140);
     border-radius: 15px;
+    margin-bottom: 1%;
 }
+
 #reallyProgress {
     width: 0%;
     height: 3vh;
     background-color: rgb(0, 255, 208, 0.75);
     border-radius: 15px;
+}
+
+/* Chỉnh âm lượng */
+#volValue {
+    background-color: blueviolet;
+    color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    border: solid
+}
+
+#volUp, #volDown {
+    background-color: blueviolet;
+    color: wheat;
+    width: 50%;
+    font-size: 25px;
+    display: inline-block;
+    border: solid
+}
+
+#volUp:hover, #volDown:hover, #prevMusic:hover, #pauseMusic:hover, #nextMusic:hover, #randomMusic:hover {
+    background-color: rgb(174, 94, 248);
 }
