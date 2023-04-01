@@ -30,7 +30,7 @@ var ranMusic = musicList[ranIndex]
 
 function randomMusic() {
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Đang phát ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đang phát ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
 }
 
 var musicPlay = document.getElementById("musicPlay")
@@ -48,7 +48,7 @@ musicButton.addEventListener("click", () => {
     // }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
 
 
 })
@@ -61,8 +61,10 @@ nextMusic.addEventListener("click", () => {
     }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
     pauseMusic.className = "fa-solid fa-play"
+    var progressReal = document.getElementById("reallyProgress")
+    progressReal.style.width = "0%"
 })
 
 prevMusic.addEventListener("click", () => {
@@ -73,20 +75,22 @@ prevMusic.addEventListener("click", () => {
     }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
     pauseMusic.className = "fa-solid fa-play"
+    var progressReal = document.getElementById("reallyProgress")
+    progressReal.style.width = "0%"
 })
 
 pauseMusic.addEventListener("click", () => {
     if (musicPlay.paused) {
         musicPlay.play()
         pauseMusic.className = "fa-solid fa-pause"
-        document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+        document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
     }
     else {
         musicPlay.pause()
         pauseMusic.className = "fa-solid fa-play"
-        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
     }
 })
 
@@ -106,12 +110,12 @@ musicPlay.addEventListener('timeupdate', () => {
     var duration = musicPlay.duration
     progressBar.innerHTML = `${formatDuration(currentTime)}/${formatDuration(duration)}`
     var progressReal = document.getElementById("reallyProgress")
-    var progress = (currentTime/duration)*100
+    var progress = (currentTime / duration) * 100
     progressReal.style.width = progress + "%"
 })
 musicPlay.addEventListener('ended', () => {
     pauseMusic.className = "fa-solid fa-play"
-    document.getElementById("nameMusic").innerHTML = `Đã phát xong: ${ranIndex+1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đã phát xong: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
 })
 musicPlay.addEventListener("load", () => {
     progressBar.innerHTML = `Đang chuyển bài, chờ tí nhé!!`
@@ -120,7 +124,7 @@ musicPlay.addEventListener("load", () => {
 function checkPlayedMusic() {
     if (!musicPlay.played) pauseMusic.className = "fa-solid fa-pause"
     else pauseMusic.className = "fa-solid fa-play"
-    
+
 }
 randomMusic()
 checkPlayedMusic()
