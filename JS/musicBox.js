@@ -106,10 +106,10 @@ musicPlay.addEventListener('loadeddata', () => {
     progressBar.innerHTML = `0:00/${formatDuration(duration)}`
 })
 musicPlay.addEventListener('timeupdate', () => {
+    var progressReal = document.getElementById("reallyProgress")
     var currentTime = musicPlay.currentTime
     var duration = musicPlay.duration
     progressBar.innerHTML = `${formatDuration(currentTime)}/${formatDuration(duration)}`
-    var progressReal = document.getElementById("reallyProgress")
     var progress = (currentTime / duration) * 100
     progressReal.style.width = progress + "%"
 })
@@ -124,7 +124,24 @@ musicPlay.addEventListener("load", () => {
 function checkPlayedMusic() {
     if (!musicPlay.played) pauseMusic.className = "fa-solid fa-pause"
     else pauseMusic.className = "fa-solid fa-play"
-
 }
+//Add event cho progress bar
+var progressReal = document.getElementById("reallyProgress")
+var progressTrue = document.getElementById("timingProgress")
+progressTrue.addEventListener("click", (e) => {
+    var x = e.clientX - progressReal.offsetLeft
+    var width = progressTrue.clientWidth
+    var percent = Math.floor((x/width)*100)
+    console.log(width)
+    console.log(percent)
+
+    progressReal.style.width = percent + "%"
+
+    if (!musicPlay.played) {
+        musicPlay.play()
+        musicPlay.currentTime = (percent/100)*musicPlay.duration
+    }
+    else musicPlay.currentTime = (percent/100)*musicPlay.duration
+})
 randomMusic()
 checkPlayedMusic()
