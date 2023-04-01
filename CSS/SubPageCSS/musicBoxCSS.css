@@ -1,0 +1,10 @@
+#JPName {
+    font-size: 18px;
+}
+.countryMusic {
+    width: 50%;
+    color: blueviolet;
+    border-radius: 3px;
+    border: solid;
+    border-color: rgb(0, 255, 128);
+}
