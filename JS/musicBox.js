@@ -45,16 +45,16 @@ function randomMusic() {
 }
 
 var musicPlay = document.getElementById("musicPlay")
-var musicButton = document.getElementById("randomMusic")
+var musicRandom = document.getElementById("randomMusic")
 var nextMusic = document.getElementById("nextMusic")
 var prevMusic = document.getElementById("prevMusic")
 var pauseMusic = document.getElementById("pauseMusic")
 var autoMusic = document.getElementById("autoMusic")
 
 //MusicBox
-musicButton.addEventListener("click", () => {
+musicRandom.addEventListener("click", () => {
     // var ranValue = ranIndex
-    var ranIndex = Math.floor(Math.random() * musicList.length)
+    ranIndex = Math.floor(Math.random() * musicList.length)
     // while (ranValue == ranIndex) {
     //     ranIndex = Math.floor(Math.random() * musicList.length)
     // }
@@ -165,7 +165,6 @@ volUp.addEventListener("click", () => {
     else {
         musicPlay.volume = musicPlay.volume + 0.1
         document.getElementById("volValue").innerHTML = ++volumeInt
-        console.log(volumeInt)
     }
 })
 volDown.addEventListener("click", () => {
