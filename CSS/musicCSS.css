@@ -89,3 +89,7 @@
 #volUp:hover, #volDown:hover, #prevMusic:hover, #pauseMusic:hover, #nextMusic:hover, #randomMusic:hover {
     background-color: rgb(174, 94, 248);
 }
+
+#volUp:active, #volDown:active, #prevMusic:active, #pauseMusic:active, #nextMusic:active, #randomMusic:active {
+    background-color: rgb(204, 94, 255);
+}
