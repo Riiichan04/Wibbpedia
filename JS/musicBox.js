@@ -144,8 +144,6 @@ progressTrue.addEventListener("click", (e) => {
     var x = e.clientX - progressReal.offsetLeft
     var width = progressTrue.clientWidth
     var percent = Math.floor((x / width) * 100)
-    console.log(width)
-    console.log(percent)
 
     progressReal.style.width = percent + "%"
 
