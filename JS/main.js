@@ -42,7 +42,7 @@ function randomThumb() {
 function random4koma() {
     var pjsk4koma = new Array()
     for (var i = 0; i < 99; i++) {
-        pjsk4koma.push(`BackupData/IMG/4koma/pjsk/4koma_${i}_en.jpg`)
+        pjsk4koma.push(`BackupData/IMG/4koma/pjsk/4koma_${i+1}_en.jpg`)
     }
     var index4koma = Math.floor(Math.random() * pjsk4koma.length)
     var ran4koma = pjsk4koma[index4koma]
@@ -54,7 +54,7 @@ function random4koma() {
 function random1koma() {
     var pjsk1koma = new Array()
     for (var i = 0; i < 40; i++) {
-        pjsk1koma.push(`BackupData/IMG/1koma/1koma${i}.jpg`)
+        pjsk1koma.push(`BackupData/IMG/1koma/1koma${i+1}.jpg`)
     }
     var index1koma = Math.floor(Math.random() * pjsk1koma.length)
     var ran1koma = pjsk1koma[index1koma]
