@@ -128,7 +128,7 @@
     width: 28vi;
     border-color: aquamarine;
     background-color: rgba(155, 155, 155, 0.196);
-    float: left
+    float: left;
 }
 
 /* Hiển Thị 4koma */
@@ -177,5 +177,9 @@
     margin-bottom: 0;
     margin-top: 5px;
     text-decoration: none;
-    color: black
+    color: black;
+}
+
+.newsBox {
+    display: grid;
 }
