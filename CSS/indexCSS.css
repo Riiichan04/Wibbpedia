@@ -26,13 +26,12 @@
 /* Thanh Header */
 .header {
     width: 100vw;
-    height: 65px;
-    background-color: rgb(0, 255, 187);
+    height: 70px;
+    background-color: rgb(0, 0, 0);
     position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
-    opacity: 0.75;
 }
 
 .headlist {
@@ -41,9 +40,9 @@
 }
 
 .headlistitem {
-    font-size: 22px;
+    font-size: 3vh;
     list-style: none;
-    margin: 0 10px;
+    margin: 0 5px;
     display: inline;
     color: orangered;
 }
@@ -51,6 +50,43 @@
 .headlistitem_item {
     text-decoration: none;
     color: rgb(157, 0, 255);
+}
+
+.musicIcon {
+    background-color: rgb(0, 145, 255);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 25px;
+    position: absolute;
+    float: right;
+    right: 10px;
+}
+
+.musicIconPopup {
+    background-color: rgb(0, 145, 255);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#popupMusic {
+    width: 25%;
+    background-color: rgb(74, 74, 74);
+    position: absolute;
+    right: 0;
+}
+
+@keyframes rorateDisk {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
 }
 
 /* Phần Chính Của Web */

@@ -18,26 +18,50 @@
     <div class="header">
 
         <ul class="headlist">
-            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="" class="headlistitem_item"> Trang
-                    Chủ</a></li>
-            <li class="headlistitem"><i class="fa-solid fa-book"></i><a href="" class="headlistitem_item"> Thư Viện</a>
-            </li>
-            <li class="headlistitem"><i class="fa-sharp fa-solid fa-gamepad"></i><a href="" class="headlistitem_item">
-                    Game</a></li>
-            <li class="headlistitem"><i class="fa-solid fa-music"></i><a href="musicPage.html"
-                    class="headlistitem_item"> Âm Nhạc</a></li>
+            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="" class="headlistitem_item"> Trang Chủ</a></li>
+            <li class="headlistitem"><i class="fa-solid fa-book"></i><a href="" class="headlistitem_item"> Thư Viện</a></li>
+            <li class="headlistitem"><i class="fa-sharp fa-solid fa-gamepad"></i><a href="" class="headlistitem_item">Game</a></li>
+            <li class="headlistitem"><i class="fa-solid fa-circle-info"></i><a href="" class="headlistitem_item"> Tin Tức</a></li>
         </ul>
 
-        <ul class="headlist">
-            <li class="headlistitem"><i class="fa-solid fa-circle-info"></i><a href="" class="headlistitem_item"> Tin
-                    Tức</a></li>
+        <ul class="headlist", style="margin-right: 10%;">
             <li class="headlistitem"><i class="fa-solid fa-flag"></i><a href="" class="headlistitem_item"> Thông Báo</a>
             </li>
             <li class="headlistitem"><i class="fa-solid fa-arrow-right-to-bracket"></i><a href=""
                     class="headlistitem_item"> Đăng Nhập</a></li>
             <li class="headlistitem"><i class="fa-regular fa-user fa-bounce icon-header"></i><a href=""
                     class="headlistitem_item"> Đăng Kí</a></li>
+            
         </ul>
+        <div class="musicIcon", style="margin-left: 0;", id="thumbMusic", onclick="openMusicPopup()"></div>
+        <div id = "popupMusic", style="display: none; color: white; border-radius: 15px;">
+            <button class="fa-solid fa-xmark", id = "closePopup", 
+                style="background-color: rgba(0,0,0,0); 
+                    border: none;
+                    font-size: 30px;
+                    color: white; "></button>
+            <div class="musicIconPopup", id="thumbMusicPopup"></div>
+            <p id="nameMusic"></p>
+            <div class="progressvolume">
+                <div id="progressMusic"></div>
+            </div>
+            <div id="timingProgress" style="margin-bottom: 0.5%; margin-top: 1%;">
+                <div id="reallyProgress"></div>
+            </div>
+            <div class="musicOperator">
+                <button id="volDown" class="fa-solid fa-volume-low"></button>
+                <div id="volValue">10</div>
+                <button id="volUp" class="fa-solid fa-volume-high"></button>
+            </div>
+            <audio id="musicPlay" , src=""></audio>
+            <div class="musicOperator">
+                <button id="prevMusic"><i class="fa-solid fa-backward"></i></button>
+                <button id="pauseMusic" , class="fa-solid fa-play"></button>
+                <button id="nextMusic"><i class="fa-solid fa-forward"></i></button>
+            </div>
+            <button id="randomMusic", style="margin-bottom: 10px;"><i class="fa-solid fa-shuffle"></i> Phát Ngẫu Nhiên</button>
+
+        </div>
     </div>
     <!-- Khu Vực Chính -->
     <div class="frame">
@@ -50,36 +74,10 @@
                     <img id="gachaimg" , src="" , alt="Random image">
                     <h2 id="gachatitle"></h2>
                     <p id="gachaparagraph"></p>
-                    <div class=musicMini>
-                        <h3 style="color: rgb(0, 137, 7); font-size: 25px;">Radio Âm Nhạc</h3>
-                        <div>
-                            <p id="nameMusic"></p>
-                            <b>
-                                <hr>
-                            </b>
-                            <div class="progressvolume">
-
-                                <div id="progressMusic"></div>
-                            </div>
-                            <div id="timingProgress" style="margin-bottom: 0.5%; margin-top: 1%;">
-                                <div id="reallyProgress"></div>
-                            </div>
-                            <div class="musicOperator">
-                                <button id="volDown" class="fa-solid fa-volume-low"></button>
-                                <div id="volValue">10</div>
-                                <button id="volUp" class="fa-solid fa-volume-high"></button>
-                            </div>
-                            <audio id="musicPlay" , src=""></audio>
-                            <div class="musicOperator">
-                                <button id="prevMusic"><i class="fa-solid fa-backward"></i></button>
-                                <button id="pauseMusic" , class="fa-solid fa-play"></button>
-                                <button id="nextMusic"><i class="fa-solid fa-forward"></i></button>
-                            </div>
-                            <button id="randomMusic"><i class="fa-solid fa-shuffle"></i> Phát Ngẫu Nhiên</button>
-
-                        </div>
+                    <div>
+                        <p>a</p>
+                        <p>a</p>
                     </div>
-
                 </div>
                 <div class="mangainfo">
                     <div class="p4komainfo">
@@ -112,13 +110,6 @@
                     <a href="" class="infonews">[Blue Archive] <i>Tất tần tật về Misono Mika</i></a>
                     <a href="" class="infonews">[Genshin] <i>Thông tin và đánh giá chung Dehya</i></a>
                     <a href="" class="infonews">[Genshin] <i>Thương Hộ Ma - Nguồn gốc và sức mạnh</i></a>
-                </div>
-                <div class="RandomNews">
-                    <h3 class="titlenews">Truy Cập Nhanh</h3>
-                    <a href="" class="infonews"></a>
-                    <a href="" class="infonews"></a>
-                    <a href="" class="infonews"></a>
-                    <a href="" class="infonews"></a>
                 </div>
 
             </div>

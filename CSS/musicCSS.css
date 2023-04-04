@@ -11,7 +11,7 @@
     border-radius: 10px;
     border-width: 5px;
     border-style: dashed;
-    border-color: aquamarine;
+    border-color: rgb(96, 96, 96);
     background-color: rgba(155, 155, 155, 0.196);
 }
 
@@ -40,7 +40,8 @@
     width: 50%;
     font-size: 25px;
     display: inline-block;
-    border: solid
+    border: solid;
+    border-color: rgb(74, 74, 74);
 }
 #randomMusic {
     width: 100%;
@@ -74,7 +75,8 @@
     font-size: 25px;
     display: inline-block;
     text-align: center;
-    border: solid
+    border: solid;
+    border-color: rgb(74, 74, 74);
 }
 
 #volUp, #volDown {
@@ -83,7 +85,12 @@
     width: 50%;
     font-size: 25px;
     display: inline-block;
-    border: solid
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+
+#volUp, #volDown, #prevMusic, #pauseMusic, #nextMusic, #randomMusic, #volValue {
+    border-radius: 15px;
 }
 
 #volUp:hover, #volDown:hover, #prevMusic:hover, #pauseMusic:hover, #nextMusic:hover, #randomMusic:hover {

@@ -36,6 +36,24 @@ nameAlbum.push("Kakusei - Suisei Cover")
 nameAlbum.push("Kataomoi - Aimer")
 nameAlbum.push("OnajiHanashi - Kain & Blanc Cover")
 
+var imgAlbum = new Array()
+imgAlbum.push("BackupData/IMG/AudioIMG/Kirari.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/NIGHTDANCER.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/AdoOverdose.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/fish_in_the_pool.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/KanadeTomosuSora.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/AsunoYozoraShoukaihan.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/Matsuri.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/Zamza.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/HaruWoTsugeru.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/Osmanthus.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/BloodFlow.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/flos.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/Ikanaide.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/Kakusei.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/Kataomoi.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/OnajiHanashi.jpg")
+
 var ranIndex = Math.floor(Math.random() * musicList.length)
 var ranMusic = musicList[ranIndex]
 
@@ -50,6 +68,17 @@ var nextMusic = document.getElementById("nextMusic")
 var prevMusic = document.getElementById("prevMusic")
 var pauseMusic = document.getElementById("pauseMusic")
 var autoMusic = document.getElementById("autoMusic")
+var thumbMusic = document.getElementById("thumbMusic")
+var thumbPopup = document.getElementById("thumbMusicPopup")
+
+//ThumbnalMusicBox
+function thumbnailMusic() {
+    thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbMusic.style.backgroundSize = "100%"
+
+    thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbPopup.style.backgroundSize = "100%"
+}
 
 //MusicBox
 musicRandom.addEventListener("click", () => {
@@ -62,7 +91,8 @@ musicRandom.addEventListener("click", () => {
     document.getElementById("musicPlay").src = ranMusic
     document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
 
-
+    thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
 })
 
 nextMusic.addEventListener("click", () => {
@@ -77,6 +107,10 @@ nextMusic.addEventListener("click", () => {
     pauseMusic.className = "fa-solid fa-play"
     var progressReal = document.getElementById("reallyProgress")
     progressReal.style.width = "0%"
+    thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbMusic.style.animation = "none"
+    thumbPopup.style.animation = "none"
 })
 
 prevMusic.addEventListener("click", () => {
@@ -91,6 +125,10 @@ prevMusic.addEventListener("click", () => {
     pauseMusic.className = "fa-solid fa-play"
     var progressReal = document.getElementById("reallyProgress")
     progressReal.style.width = "0%"
+    thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    thumbMusic.style.animation = "none"
+    thumbPopup.style.animation = "none"
 })
 
 pauseMusic.addEventListener("click", () => {
@@ -98,11 +136,16 @@ pauseMusic.addEventListener("click", () => {
         musicPlay.play()
         pauseMusic.className = "fa-solid fa-pause"
         document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+        thumbMusic.style.animation = "rorateDisk 5s linear infinite"
+        thumbPopup.style.animation = "rorateDisk 5s linear infinite"
+        console.log(thumbPopup.style.animation)
     }
     else {
         musicPlay.pause()
         pauseMusic.className = "fa-solid fa-play"
         document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+        thumbMusic.style.animation = "none"
+        thumbPopup.style.animation = "none"
     }
 })
 
@@ -141,7 +184,7 @@ function checkPlayedMusic() {
 var progressReal = document.getElementById("reallyProgress")
 var progressTrue = document.getElementById("timingProgress")
 progressTrue.addEventListener("click", (e) => {
-    var x = e.clientX - progressReal.offsetLeft
+    var x = e.clientX - progressReal.offsetParent.offsetLeft
     var width = progressTrue.clientWidth
     var percent = Math.floor((x / width) * 100)
 
@@ -179,5 +222,17 @@ volDown.addEventListener("click", () => {
         console.log(volumeInt)
     }
 })
+
+//Event khi click vào ô nhạc
+function openMusicPopup() {
+    var popupMusic = document.getElementById("popupMusic")
+    popupMusic.style.display = ""
+}
+var closePopup = document.getElementById("closePopup")
+closePopup.addEventListener("click", () => {
+    popupMusic.style.display = "none"
+})
+
+thumbnailMusic()
 randomMusic()
 checkPlayedMusic()
