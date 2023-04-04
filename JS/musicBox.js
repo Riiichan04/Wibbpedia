@@ -144,8 +144,8 @@ pauseMusic.addEventListener("click", () => {
         musicPlay.pause()
         pauseMusic.className = "fa-solid fa-play"
         document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
-        thumbMusic.style.animation = "none"
-        thumbPopup.style.animation = "none"
+        thumbMusic.style.animationPlayState = "paused"
+        thumbPopup.style.animationPlayState = "paused"
     }
 })
 
