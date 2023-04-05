@@ -59,7 +59,7 @@ var ranMusic = musicList[ranIndex]
 
 function randomMusic() {
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Đang phát ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đang phát <b>${nameAlbum[ranIndex]}</b>`
 }
 
 var musicPlay = document.getElementById("musicPlay")
@@ -89,7 +89,7 @@ musicRandom.addEventListener("click", () => {
     // }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: <b>${nameAlbum[ranIndex]}</b>`
 
     thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
@@ -103,7 +103,7 @@ nextMusic.addEventListener("click", () => {
     }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: <b>${nameAlbum[ranIndex]}</b>`
     pauseMusic.className = "fa-solid fa-play"
     var progressReal = document.getElementById("reallyProgress")
     progressReal.style.width = "0%"
@@ -121,7 +121,7 @@ prevMusic.addEventListener("click", () => {
     }
     var ranMusic = musicList[ranIndex]
     document.getElementById("musicPlay").src = ranMusic
-    document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
     pauseMusic.className = "fa-solid fa-play"
     var progressReal = document.getElementById("reallyProgress")
     progressReal.style.width = "0%"
@@ -135,7 +135,7 @@ pauseMusic.addEventListener("click", () => {
     if (musicPlay.paused) {
         musicPlay.play()
         pauseMusic.className = "fa-solid fa-pause"
-        document.getElementById("nameMusic").innerHTML = `Đang phát: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+        document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
         thumbMusic.style.animation = "rorateDisk 5s linear infinite"
         thumbPopup.style.animation = "rorateDisk 5s linear infinite"
         console.log(thumbPopup.style.animation)
@@ -143,7 +143,7 @@ pauseMusic.addEventListener("click", () => {
     else {
         musicPlay.pause()
         pauseMusic.className = "fa-solid fa-play"
-        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+        document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: <b>${nameAlbum[ranIndex]}</b>`
         thumbMusic.style.animationPlayState = "paused"
         thumbPopup.style.animationPlayState = "paused"
     }
@@ -170,7 +170,7 @@ musicPlay.addEventListener('timeupdate', () => {
 })
 musicPlay.addEventListener('ended', () => {
     pauseMusic.className = "fa-solid fa-play"
-    document.getElementById("nameMusic").innerHTML = `Đã phát xong: ${ranIndex + 1}. ${nameAlbum[ranIndex]}`
+    document.getElementById("nameMusic").innerHTML = `Đã phát xong: <b>${nameAlbum[ranIndex]}</b>`
 })
 musicPlay.addEventListener("load", () => {
     progressBar.innerHTML = `Đang chuyển bài, chờ tí nhé!!`
@@ -224,6 +224,7 @@ volDown.addEventListener("click", () => {
 })
 
 //Event khi click vào ô nhạc
+let bgBlur = document.getElementById("bgblur")
 function openMusicPopup() {
     var popupMusic = document.getElementById("popupMusic")
     popupMusic.style.display = ""
