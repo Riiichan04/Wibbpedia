@@ -96,7 +96,7 @@
 
 .mainframe {
     border-radius: 10px;
-    width: 75vw;
+    width: 50vw;
     background-color: rgba(255, 255, 255, 0.85);
     margin-top: 200px;
     /* margin-left: 10vw; */
@@ -127,11 +127,19 @@
     border-width: 5px;
     border-style: double;
     /* width: 28vi; */
-    width: 25%;
-    height: 25%;
+    width: 30%;
+    height: 100rem;
     border-color: aquamarine;
     background-color: rgba(255, 252, 252, 0.75);
     float: left;
+}
+
+.hotnewsframe {
+    width: 100%;
+    border-width: 10px;
+    border: double;    
+    border-color: aquamarine;
+    border-radius: 10px;
 }
 
 /* Hiển Thị 4koma */

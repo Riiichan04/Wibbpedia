@@ -138,7 +138,6 @@ pauseMusic.addEventListener("click", () => {
         document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
         thumbMusic.style.animation = "rorateDisk 5s linear infinite"
         thumbPopup.style.animation = "rorateDisk 5s linear infinite"
-        console.log(thumbPopup.style.animation)
     }
     else {
         musicPlay.pause()
@@ -168,10 +167,14 @@ musicPlay.addEventListener('timeupdate', () => {
     var progress = (currentTime / duration) * 100
     progressReal.style.width = progress + "%"
 })
+
 musicPlay.addEventListener('ended', () => {
     pauseMusic.className = "fa-solid fa-play"
     document.getElementById("nameMusic").innerHTML = `Đã phát xong: <b>${nameAlbum[ranIndex]}</b>`
+    thumbMusic.style.animation = "none"
+    thumbPopup.style.animation = "none"
 })
+
 musicPlay.addEventListener("load", () => {
     progressBar.innerHTML = `Đang chuyển bài, chờ tí nhé!!`
 })
@@ -219,7 +222,6 @@ volDown.addEventListener("click", () => {
     else {
         musicPlay.volume = musicPlay.volume - 0.1
         document.getElementById("volValue").innerHTML = --volumeInt
-        console.log(volumeInt)
     }
 })
 
@@ -233,6 +235,7 @@ var closePopup = document.getElementById("closePopup")
 closePopup.addEventListener("click", () => {
     popupMusic.style.display = "none"
 })
+
 
 thumbnailMusic()
 randomMusic()

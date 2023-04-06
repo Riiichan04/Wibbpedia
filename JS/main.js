@@ -31,8 +31,8 @@ function randomThumb() {
 
     document.getElementById("gachatitle").innerHTML = title[ranIndex]
     document.getElementById("gachatitle").style.width = "100%"
-    document.getElementById("gachatitle").style.height = "100%"
-    document.getElementById("gachatitle").style.marginLeft = "auto"
+    // document.getElementById("gachatitle").style.height = "100%"
+    // document.getElementById("gachatitle").style.marginLeft = "auto"
 
     document.getElementById("gachaparagraph").innerHTML = paragraph[ranIndex]
     document.getElementById("gachaparagraph").style.width = "100%"
