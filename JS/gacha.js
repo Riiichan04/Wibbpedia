@@ -259,7 +259,7 @@ function gacha() {
         // gacharesult.style.backgroundImage = `url("https://media.tenor.com/8OqlJIRATS0AAAAd/wishing-genshin.gif")`
         // gacharesult.style.width = "50vi"
         let video = document.createElement("video")
-        video.src="/BackupData/Video/gacha4star.mp4"
+        video.src="https://riiichan04.github.io/Wibbpedia/BackupData/Video/gacha4star.mp4"
         video.control = false;
         gacharesult.appendChild(video)
         video.style.width = "100%"
@@ -277,7 +277,7 @@ function gacha() {
         // gacharesult.style.backgroundImage = `url("https://media.tenor.com/Nc7Fgo43GLwAAAAd/genshin-gold-genshin-wish.gif")`
         // gacharesult.style.width = "50vi"
         let video = document.createElement("video")
-        video.src="/BackupData/Video/gacha5star.mp4"
+        video.src="https://riiichan04.github.io/Wibbpedia/BackupData/Video/gacha5star.mp4"
         video.control = false;
         gacharesult.appendChild(video)
         video.style.width = "100%"
