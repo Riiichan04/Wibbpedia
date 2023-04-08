@@ -1,5 +1,5 @@
 # Wibbpedia
-1. Sorry because using Vietnamese. I know English but i want my Vietnamese friend know what i'm doing, so i only use Vietnamese.
+1. Sorry because using Vietnamese. I know English but i want my Vietnamese friends know what i'm doing, so i only use Vietnamese.
 2. This web is just my small project to train how to use JS in HTML & CSS. And please don't notice about anything i write on my website. It's just nevermind :<
 
 ## Vietnamese
