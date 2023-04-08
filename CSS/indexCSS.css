@@ -13,16 +13,6 @@
     background-position: top, bottom;
 }
 
-/* .mainbg {
-    height:100vh;
-    width: 100vw;
-    background-color: gray;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://cdn.discordapp.com/attachments/1069352694554312704/1069352701881761803/775137.gif"), url("https://cutewallpaper.org/22/anime-setting-wallpapers/1083114127.jpg");
-    background-size: 110%;
-    background-repeat: no-repeat;
-    background-position: center bottom, center top;
-} */
-
 /* Thanh Header */
 .header {
     width: 100vw;
@@ -132,6 +122,15 @@
     border-color: aquamarine;
     background-color: rgba(255, 252, 252, 0.75);
     float: left;
+}
+
+.gachaframe {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: double;
 }
 
 .hotnewsframe {
