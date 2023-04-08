@@ -157,12 +157,13 @@ function gacha() {
             let slot1 = wp5[Math.round(Math.random() * 10)]
             result.push(slot1)
             sort.push(5)
+            colorArr.push("rgb(204, 173, 0)")
         }
         else {
             let slot1 = pullgacha[Math.round(Math.random() * 6)]
             result.push(slot1)
             sort.push(5)
-            colorArr.push("rgb(255, 247, 0)")
+            colorArr.push("rgb(204, 173, 0)")
         }
     }
 
@@ -193,13 +194,13 @@ function gacha() {
             let res = wp5[Math.round(Math.random() * 10)]
             result.push(res)
             sort.push(5)
-            colorArr.push("rgb(255, 247, 0)")
+            colorArr.push("rgb(204, 173, 0)")
         }
         else {
             let res = pullgacha[Math.round(Math.random() * 6)]
             result.push(res)
             sort.push(5)
-            colorArr.push("rgb(255, 247, 0)")
+            colorArr.push("rgb(204, 173, 0)")
         }
     }
 
