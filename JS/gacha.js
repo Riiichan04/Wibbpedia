@@ -256,16 +256,36 @@ function gacha() {
     const gacharesult = document.getElementById("gacharesult")
     const gachabtn = document.getElementById("gachabutton")
     if (sort[0] == 4) {
-        gacharesult.style.backgroundImage = `url("https://media.tenor.com/8OqlJIRATS0AAAAd/wishing-genshin.gif")`
+        // gacharesult.style.backgroundImage = `url("https://media.tenor.com/8OqlJIRATS0AAAAd/wishing-genshin.gif")`
         // gacharesult.style.width = "50vi"
+        let video = document.createElement("video")
+        video.src="/BackupData/Video/gacha4star.mp4"
+        video.control = false;
+        gacharesult.appendChild(video)
+        video.style.width = "100%"
+        video.style.height = "100%"
+        video.style.margin = "0 0 0 0"
+        video.play()
+        video.setAttribute('id', 'videogacha')
+
         gacharesult.style.height = "18.5vi"
         gacharesult.style.borderRadius = "0 0 10px 10px"
         gacharesult.style.backgroundRepeat = "no-repeat"
         gachabtn.style.pointerEvents = "none"
     }
     else {
-        gacharesult.style.backgroundImage = `url("https://media.tenor.com/Nc7Fgo43GLwAAAAd/genshin-gold-genshin-wish.gif")`
+        // gacharesult.style.backgroundImage = `url("https://media.tenor.com/Nc7Fgo43GLwAAAAd/genshin-gold-genshin-wish.gif")`
         // gacharesult.style.width = "50vi"
+        let video = document.createElement("video")
+        video.src="/BackupData/Video/gacha5star.mp4"
+        video.control = false;
+        gacharesult.appendChild(video)
+        video.style.width = "100%"
+        video.style.height = "100%"
+        video.style.margin = "0 0 0 0"
+        video.play()
+        video.setAttribute('id', 'videogacha')
+        
         gacharesult.style.height = "18.5vi"
         gacharesult.style.borderRadius = "0 0 10px 10px"
         gacharesult.style.backgroundRepeat = "no-repeat"
@@ -274,6 +294,7 @@ function gacha() {
     userGacha.set(user_id, userGacha.get(user_id)+10)
     //Set thời gian để hiện kết quả gacha
     setTimeout(() => {
+        document.getElementById('videogacha').remove()
         for (let i = 0; i < sort.length; i++) {
             gacharesult.style.backgroundImage = ""
             const resultDiv = document.createElement('div')
@@ -284,7 +305,7 @@ function gacha() {
         }
         gachabtn.style.pointerEvents = "auto"
         document.getElementById("protectgacha").innerHTML = `Bảo hiểm của bạn còn ${80 - userGacha.get(user_id)} lượt`
-    }, 6280)
+    }, 6000)
 
     
 }
