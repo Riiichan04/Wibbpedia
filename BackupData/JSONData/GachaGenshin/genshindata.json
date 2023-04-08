@@ -1,0 +1,46 @@
+{
+    "weapon": {
+        "sword":[
+            {
+                "name": "Ánh Lá Phán Quyết",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Ánh Sáng Đêm Sương Mù",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Con Thoi Chu Sa",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Đao Săn Cá",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Đoản Đao Amenona",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Haran Geppaku Futsu",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Kagotsube Isshin",
+                "rare": 5,
+                "img": null
+            },
+            {
+                "name": "Kiếm Bạc",
+                "rare": 2,
+                "img": null
+            }
+        ]
+    }
+}
