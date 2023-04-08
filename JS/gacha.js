@@ -241,10 +241,7 @@ function gacha() {
         gacharesult.style.backgroundRepeat = "no-repeat"
         gachabtn.style.pointerEvents = "none"
     }
-
-
-
-
+    //Set thời gian để hiện kết quả gacha
     setTimeout(() => {
         for (let i = 0; i < sort.length; i++) {
             gacharesult.style.backgroundImage = ""
@@ -256,6 +253,4 @@ function gacha() {
         }
         gachabtn.style.pointerEvents = "auto"
     }, 6000)
-
-
 }
