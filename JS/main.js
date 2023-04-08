@@ -63,6 +63,11 @@ function random1koma() {
     document.getElementById("gacha1koma").style.height = "100%"
 }
 
+function setCookies() {
+    document.cookie = "gachauser"
+}
+
+setCookies()
 randomThumb()
 random1koma()
 random4koma()

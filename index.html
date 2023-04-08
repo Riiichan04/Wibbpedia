@@ -54,7 +54,7 @@
             </div>
             <div class="musicOperator">
                 <button id="volDown" class="fa-solid fa-volume-low"></button>
-                <div id="volValue">10</div>
+                <div id="volValue", style="user-select: none;">10</div>
                 <button id="volUp" class="fa-solid fa-volume-high"></button>
             </div>
             <audio id="musicPlay" , src=""></audio>
@@ -77,6 +77,7 @@
                     Góc Gacha</h4>
                 <div id="gachabutton" onclick="gacha()"> Click vào Để Gacha</div>
                 <div id="gacharesult"></div>
+                <div id="protectgacha"></div>
             </div>
         </div>
         <div class="mainframe">
@@ -132,11 +133,11 @@
 
     </div>
 
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="JS/main.js"></script>
     <script src="JS/musicBox.js"></script>
     <script src="JS/gacha.js"></script>
+    <script src="https://unpkg.com/gifuct-js"></script>
 </body>
 
 </html>

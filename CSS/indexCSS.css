@@ -53,6 +53,10 @@
     right: 10px;
 }
 
+.musicIcon:hover {
+    cursor: pointer;
+}
+
 .musicIconPopup {
     background-color: rgb(0, 145, 255);
     width: 15rem;
@@ -61,6 +65,15 @@
     right: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#closePopup:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+#closePopup:active {
+    color: rgb(78, 78, 78);
 }
 
 #popupMusic {
@@ -216,6 +229,6 @@
     background-color: rgb(0, 81, 81);
 
 }
-#gacharesult {
+#gacharesult, #protectgacha {
     background-color: rgb(224, 224, 224);
 }

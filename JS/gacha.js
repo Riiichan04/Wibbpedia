@@ -126,6 +126,13 @@ let ch4 = [
 ]
 let pullgacha = ["[5★]Keqing", "[5★]Jean", "[5★]Qiqi", "[5★]Diluc", "[5★]Mona", "[5★]Tignari", "[5★]Dehya"]
 
+const userGacha = new Map()
+
+//Xử lý cookies
+var user_id = document.cookie
+userGacha.set(user_id, 0)
+
+
 
 function gacha() {
     document.getElementById("gacharesult").innerHTML = ""
@@ -134,39 +141,60 @@ function gacha() {
     //Tạo 1 mảng để set Color
     let colorArr = new Array()
     let protectRate = Math.floor(Math.random() * 99)
+    //Xóa dòng bảo hiểm
+    document.getElementById("protectgacha").innerHTML = ""
     //Luôn được ít nhất 1 4* hay 5*
     var result = new Array()
-    if (protectRate < 97) {
-        let star4 = Math.round(Math.random())
-        if (star4 == 1) {
-            let slot1 = ch4[Math.round(Math.random() * 28)]
-            result.push(slot1)
-            sort.push(4)
-            colorArr.push("rgb(212, 0, 212)")
-        }
-        else {
-            let slot1 = wp4[Math.round(Math.random() * 53)]
-            result.push(slot1)
-            sort.push(4)
-            colorArr.push("rgb(212, 0, 212)")
-        }
-    }
-    else {
+    if (userGacha.get(user_id) == 70) {
+        userGacha.set(user_id, -10)
         let rate = Math.round(Math.random() * 2)
         if (rate == 0) {
             let slot1 = wp5[Math.round(Math.random() * 10)]
-            result.push(slot1)
+            result.push(slot1 + "(Bảo Hiểm)")
             sort.push(5)
             colorArr.push("rgb(204, 173, 0)")
         }
         else {
             let slot1 = pullgacha[Math.round(Math.random() * 6)]
-            result.push(slot1)
+            result.push(slot1 + "(Bảo Hiểm)")
             sort.push(5)
             colorArr.push("rgb(204, 173, 0)")
         }
     }
-
+    else {
+        
+        if (protectRate < 97) {
+            let star4 = Math.round(Math.random())
+            if (star4 == 1) {
+                let slot1 = ch4[Math.round(Math.random() * 28)]
+                result.push(slot1)
+                sort.push(4)
+                colorArr.push("rgb(212, 0, 212)")
+            }
+            else {
+                let slot1 = wp4[Math.round(Math.random() * 53)]
+                result.push(slot1)
+                sort.push(4)
+                colorArr.push("rgb(212, 0, 212)")
+            }
+        }
+        else {
+            let rate = Math.round(Math.random() * 2)
+            userGacha.set(user_id, -10)
+            if (rate == 0) {
+                let slot1 = wp5[Math.round(Math.random() * 10)]
+                result.push(slot1)
+                sort.push(5)
+                colorArr.push("rgb(204, 173, 0)")
+            }
+            else {
+                let slot1 = pullgacha[Math.round(Math.random() * 6)]
+                result.push(slot1)
+                sort.push(5)
+                colorArr.push("rgb(204, 173, 0)")
+            }
+        }
+    }
     //Gacha các lượt còn lại
     for (let i = 1; i < 10; i++) {
         let rategacha = Math.floor(Math.random() * 10000)
@@ -191,12 +219,14 @@ function gacha() {
 
         }
         else if (rategacha < 5265) {
+            userGacha.set(user_id, -10)
             let res = wp5[Math.round(Math.random() * 10)]
             result.push(res)
             sort.push(5)
             colorArr.push("rgb(204, 173, 0)")
         }
         else {
+            userGacha.set(user_id, -10)
             let res = pullgacha[Math.round(Math.random() * 6)]
             result.push(res)
             sort.push(5)
@@ -241,6 +271,7 @@ function gacha() {
         gacharesult.style.backgroundRepeat = "no-repeat"
         gachabtn.style.pointerEvents = "none"
     }
+    userGacha.set(user_id, userGacha.get(user_id)+10)
     //Set thời gian để hiện kết quả gacha
     setTimeout(() => {
         for (let i = 0; i < sort.length; i++) {
@@ -252,5 +283,8 @@ function gacha() {
             gacharesult.style.height = ""
         }
         gachabtn.style.pointerEvents = "auto"
-    }, 6000)
+        document.getElementById("protectgacha").innerHTML = `Bảo hiểm của bạn còn ${80 - userGacha.get(user_id)} lượt`
+    }, 6280)
+
+    
 }
