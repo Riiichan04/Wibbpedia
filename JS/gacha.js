@@ -234,7 +234,7 @@ function gacha() {
         gachabtn.style.pointerEvents = "none"
     }
     else {
-        gacharesult.style.backgroundImage = `url("hhttps://media.tenor.com/Nc7Fgo43GLwAAAAd/genshin-gold-genshin-wish.gif")`
+        gacharesult.style.backgroundImage = `url("https://media.tenor.com/Nc7Fgo43GLwAAAAd/genshin-gold-genshin-wish.gif")`
         // gacharesult.style.width = "50vi"
         gacharesult.style.height = "18.5vi"
         gacharesult.style.borderRadius = "0 0 10px 10px"
