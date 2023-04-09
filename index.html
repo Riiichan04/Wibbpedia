@@ -4,6 +4,7 @@
 <head>
     <title>Wibbpedia</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/loginForm.css">
     <link rel="stylesheet" href="CSS/indexCSS.css">
     <link rel="stylesheet" href="CSS/musicCSS.css">
     <link rel="icon" href="https://i.pinimg.com/736x/4f/e9/4d/4fe94da2913bdc63a1f5c404f5fe0682.jpg">
@@ -31,12 +32,42 @@
         <ul class="headlist" , style="margin-right: 10%;">
             <li class="headlistitem"><i class="fa-solid fa-flag"></i><a href="" class="headlistitem_item"> Thông Báo</a>
             </li>
-            <li class="headlistitem"><i class="fa-solid fa-arrow-right-to-bracket"></i><a href=""
+            <li class="headlistitem"><i class="fa-solid fa-arrow-right-to-bracket"></i><a href="SubPage/Login/loginPage.html"
                     class="headlistitem_item"> Đăng Nhập</a></li>
             <li class="headlistitem"><i class="fa-regular fa-user fa-bounce icon-header"></i><a href=""
                     class="headlistitem_item"> Đăng Kí</a></li>
-
         </ul>
+        <!-- Form Đăng Kí -->
+        <!-- <div class="userForm">
+            <div class="userForm_headerForm">
+                <h3 class="userForm_heading">Đăng Ký</h3>
+                <span class="userForm_switchbtn">Đăng Nhập</span>
+            </div>
+            <div class="userForm_Info">
+                <div class="userForm_Layout">
+                    <input type="text" class="userInput" placeholder="Username">
+                </div>
+                <div class="userForm_Layout">
+                    <input type="text" class="userInput" placeholder="Tên đăng nhập">
+                </div>
+                <div class="userForm_Layout">
+                    <input type="text" class="userInput" placeholder="Email">
+                </div>
+                <div class="userForm_Layout">
+                    <input type="text" class="userInput" placeholder="Password">
+                </div>
+                <div class="userForm_Layout">
+                    <input type="text" class="userInput" placeholder="Nhập lại password">
+                </div>
+            </div>
+
+            <div class="userForm_btnControl">
+                <div class="userForm_btn">Trở Lại</div>
+                <div class="userForm_btn--primary">Đăng Ký</div>
+            </div>
+        </div> -->
+
+        <!-- Hộp Nhạc -->
         <div class="musicIcon" , style="margin-left: 0;" , id="thumbMusic" , onclick="openMusicPopup()"></div>
         <div id="popupMusic" , style="display: none; color: white; border-radius: 15px;">
             <img src="" alt="">
@@ -63,9 +94,7 @@
                 <button id="pauseMusic" , class="fa-solid fa-play"></button>
                 <button id="nextMusic"><i class="fa-solid fa-forward"></i></button>
             </div>
-            <button id="randomMusic" , style="margin-bottom: 10px;"><i class="fa-solid fa-shuffle"></i> Phát Ngẫu
-                Nhiên</button>
-
+            <button id="randomMusic" , style="margin-bottom: 10px;"><i class="fa-solid fa-shuffle"></i> Phát Ngẫu Nhiên</button>
         </div>
     </div>
     <!-- Khu Vực Chính -->
@@ -130,7 +159,6 @@
                 <img id="gacha1koma" src="" alt="1koma">
             </div>
         </div>
-
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
