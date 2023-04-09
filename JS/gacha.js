@@ -307,7 +307,7 @@ function gacha() {
         }
         gachabtn.style.pointerEvents = "auto"
         document.getElementById("protectgacha").innerHTML = `Bảo hiểm của bạn còn ${80 - userGacha.get(user_id)} lượt`
-    }, 6000)
+    }, 6250)
 
     
 }
