@@ -189,10 +189,9 @@ function checkPlayedMusic() {
 var progressReal = document.getElementById("reallyProgress")
 var progressTrue = document.getElementById("timingProgress")
 progressTrue.addEventListener("click", (e) => {
-    var x = e.clientX - progressReal.offsetParent.offsetLeft
+    var x = e.clientX - progressReal.offsetParent.offsetParent.offsetLeft
     var width = progressTrue.clientWidth
     var percent = Math.floor((x / width) * 100)
-
     progressReal.style.width = percent + "%"
 
     if (!musicPlay.played) {
