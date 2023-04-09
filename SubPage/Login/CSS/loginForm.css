@@ -1,18 +1,33 @@
+/* Box chứa các DIV */
+#scrollBox {
+    transition: all .3s ease-in;
+    display: flex;
+    width: fit-content;
+}
 /* Form Đăng Nhập/Đăng Ký */
 .userForm {
+    overflow: hidden;
+    transition: all .2s linear;
     border: solid;
     border-radius: 15px;
     backdrop-filter: blur(5px);
-    display: block; 
     position: absolute; 
     top: 25%;
-    left: 35%;    
-    /* margin-top: 4.75vi;  */
-    width: 30vi;
+    left: 37%;    
+    width: 23vw;
     align-items: center;
 }
 
+.boxLogin, .boxCreate {
+    margin-right: 10%;
+    flex-shrink: 0;
+}
+.boxCreate {
+    margin-left: 10%;
+}
+
 .userForm_headerForm {
+    width: 110%;
     color: white;
     display: flex;
     align-items: center;
@@ -30,8 +45,10 @@
 
 
 .userForm_Info {
-    padding: 0 2.25vi;
+    padding-top: 0;
+    padding-left: 2.25vi;
     margin-top: 3%;
+    width: 100%;
 }
 
 .userInput {
@@ -58,7 +75,7 @@
 .userForm_btnControl {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-left: 5%;
+    margin-left: 10%;
     margin-bottom: 5%;
     padding: 1% 1% 1% 1%;
     background-color: rgb(0, 255, 221);
@@ -73,3 +90,4 @@
 .userForm_btnControl:active {
     background-color: rgb(0, 237, 213);
 }
+
