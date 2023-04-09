@@ -43,3 +43,17 @@ var second = setInterval(() => {
         }
     }
 }, 1000)
+
+var musicBTN = document.getElementById("musicBTN")
+musicBTN.addEventListener("click", () => {
+    var audio = document.getElementById("audio")
+    
+    if (audio.paused) {
+        audio.play()
+        musicBTN.innerHTML = "Ngừng Nhạc"
+    }
+    else {
+        audio.pause()
+        musicBTN.innerHTML = "Chơi Nhạc"
+    }
+})
