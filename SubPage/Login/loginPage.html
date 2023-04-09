@@ -1,21 +1,53 @@
 <!DOCTYPE html>
+
 <head>
     <title>Wibbpedia - Đăng Nhập</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/bgCSS.css">
+    <link rel="stylesheet" href="CSS/loginForm.css">
     <link rel="icon" href="https://i.pinimg.com/736x/4f/e9/4d/4fe94da2913bdc63a1f5c404f5fe0682.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+
 <body>
     <div id="bg-login">
         <img src="" alt="">
         <img src="" alt="">
     </div>
-    <div>
-        <a href="https://riiichan04.github.io/Wibbpedia">Trang Chủ</a>
+
+
+    <!-- Form Đăng Kí -->
+    <div class="userForm">
+        <div class="userForm_headerForm">
+            <h3 class="userForm_heading">Đăng Nhập</h3>
+            <span class="userForm_switchbtn">Đăng Ký</span>
+        </div>
+        <div class="userForm_Info">
+            <div class="userForm_Layout">
+                <input type="text" class="userInput" placeholder="Tên đăng nhập">
+            </div>
+            <div class="userForm_Layout">
+                <input type="password" class="userInput" placeholder="Password">
+            </div>
+        </div>
+
+        <div class="userForm_forgotPass">Quên Mật Khẩu</div>
+
+        <div class="userForm_btnControl">Đăng Nhập</div>
     </div>
+
+    <div style="background-color: white; color: purple; width: 5%;">
+        <a href="https://riiichan04.github.io/Wibbpedia", style=" text-decoration: none;">Trang Chủ</a>
+    </div>
+
     <script src="JS/login.js"></script>
     <script src="JS/background.js"></script>
 </body>

@@ -111,6 +111,7 @@ nextMusic.addEventListener("click", () => {
     thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     thumbMusic.style.animation = "none"
     thumbPopup.style.animation = "none"
+    popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
 })
 
 prevMusic.addEventListener("click", () => {
@@ -129,6 +130,7 @@ prevMusic.addEventListener("click", () => {
     thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     thumbMusic.style.animation = "none"
     thumbPopup.style.animation = "none"
+    popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
 })
 
 pauseMusic.addEventListener("click", () => {
@@ -230,6 +232,8 @@ let bgBlur = document.getElementById("bgblur")
 function openMusicPopup() {
     var popupMusic = document.getElementById("popupMusic")
     popupMusic.style.display = ""
+    popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    popupMusic.style.backgroundSize = "100%"
 }
 var closePopup = document.getElementById("closePopup")
 closePopup.addEventListener("click", () => {
