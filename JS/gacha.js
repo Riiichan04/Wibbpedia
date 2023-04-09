@@ -297,6 +297,7 @@ function gacha() {
     //Set thời gian để hiện kết quả gacha
     setTimeout(() => {
         document.getElementById('videogacha').remove()
+        gacharesult.style.borderRadius = "0 0 0 0"
         for (let i = 0; i < sort.length; i++) {
             gacharesult.style.backgroundImage = ""
             const resultDiv = document.createElement('div')
