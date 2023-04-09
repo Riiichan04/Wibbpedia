@@ -269,7 +269,7 @@ function gacha() {
         video.setAttribute('id', 'videogacha')
         video.volume = 0.5
 
-        gacharesult.style.height = "18.5vi"
+        gacharesult.style.height = "16vi"
         gacharesult.style.borderRadius = "0 0 10px 10px"
         gacharesult.style.backgroundRepeat = "no-repeat"
         gachabtn.style.pointerEvents = "none"
@@ -286,9 +286,9 @@ function gacha() {
         video.style.margin = "0 0 0 0"
         video.play()
         video.setAttribute('id', 'videogacha')
-        video.volume = 0.5
+        video.volume = 0.25
 
-        gacharesult.style.height = "18.5vi"
+        gacharesult.style.height = "16vi"
         gacharesult.style.borderRadius = "0 0 10px 10px"
         gacharesult.style.backgroundRepeat = "no-repeat"
         gachabtn.style.pointerEvents = "none"
