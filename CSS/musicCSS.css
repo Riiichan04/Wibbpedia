@@ -32,7 +32,11 @@
 #nameMusic {
     font-size: 17px;
     color: rgb(255, 255, 255);
-    
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 /* Các nút nhạc */
@@ -61,6 +65,11 @@
 /* Thanh progress */
 #progressMusic {
     font-size: 18px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 #timingProgress {
