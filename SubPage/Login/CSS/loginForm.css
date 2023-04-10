@@ -14,20 +14,19 @@
     position: absolute; 
     top: 25%;
     left: 37%;    
-    width: 28.5vw;
+    width: 360px;
     align-items: center;
 }
 
 .boxLogin, .boxCreate {
-    margin-right: 20%;
     flex-shrink: 0;
 }
-.boxCreate {
-    margin-left: 20%;
+.boxLogin {
+    width: 320px;
+    margin-right: 60px;
 }
 
 .userForm_headerForm {
-    width: 110%;
     color: white;
     align-items: center;
     margin-left: 2.25vi;
@@ -51,8 +50,8 @@
     border: none;
     border-bottom: 2px solid #ffffff3b;
     background-color: transparent;
-    margin-bottom: 2%;
-    width: 100%;
+    margin-bottom: 5%;
+    width: 300px;
     height: 2vi;
 }
 
@@ -61,8 +60,8 @@
 }
 
 .userForm_forgotPass {
+    font-size: 0.85rem;
     color: white;
-    text-align: end;
     margin-right: 0;
     margin-bottom: 5%;
     cursor: pointer;
@@ -71,31 +70,28 @@
 .operationBTN {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 40px;
 }
 
 .userForm_switchbtn {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-left: 10%;
+    font-size: 0.85rem;
+    color: white;
+    margin-right: 0;
     margin-bottom: 5%;
-    padding: 1% 1% 1% 1%;
-    background-color: rgb(255, 128, 0);
-    border-radius: 10px;
-    width: 36%;
-    text-align: center;
     cursor: pointer;
+
 }
 
 .userForm_btnControl {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-left: 10%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-left: 5%;
     margin-bottom: 5%;
     padding: 1% 1% 1% 1%;
     background-color: rgb(0, 255, 221);
     border-radius: 10px;
-    width: 40%;
+    width: 60%;
     text-align: center;
     cursor: pointer;
 }
@@ -105,10 +101,3 @@
 .userForm_btnControl:active {
     background-color: rgb(0, 237, 213);
 }
-.userForm_switchbtn:hover {
-    background-color: rgb(255, 106, 0);
-}
-.userForm_switchbtn:active {
-    background-color: rgb(218, 65, 0);
-}
-
