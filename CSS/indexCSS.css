@@ -69,12 +69,12 @@
     margin-right: auto;
 }
 
-#closePopup:hover {
+#closePopup:hover, #closeUserPopup:hover {
     cursor: pointer;
     color: gray;
 }
 
-#closePopup:active {
+#closePopup:active, #closeUserPopup:active {
     color: rgb(78, 78, 78);
 }
 
@@ -233,4 +233,39 @@
 }
 #gacharesult, #protectgacha {
     background-color: rgb(224, 224, 224);
+}
+
+/* Popup User */
+#userPopup {
+    cursor: pointer;
+    user-select: none;
+}
+.usertext:hover {
+    color: rgb(191, 0, 255);
+}
+.usertext:active {
+    color: #ff00ff;
+}
+#userinfo {
+    margin-top: 70px;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    width: 15rem;
+    /* height: 5rem; */
+    padding-bottom: 1%;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray;
+    right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logout, #changeavt {
+    cursor: pointer;
+}
+#logout:hover, #changeavt:hover {
+    color: rgb(218, 218, 218);
+}
+#logout:active, #changeavt:active {
+    color: rgb(150, 150, 150);
 }

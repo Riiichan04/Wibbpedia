@@ -31,11 +31,29 @@
         <ul class="headlist" , style="margin-right: 10%;">
             <li class="headlistitem"><i class="fa-solid fa-flag"></i><a href="" class="headlistitem_item"> Thông Báo</a>
             </li>
-            <li class="headlistitem"><i class="fa-solid fa-arrow-right-to-bracket"></i><a
-                    href="SubPage/Login/loginPage.html" class="headlistitem_item"> Đăng Nhập</a></li>
-            <li class="headlistitem"><i class="fa-regular fa-user fa-bounce icon-header"></i><a href=""
+            <div class="headlistitem signined"><i class="fa-solid fa-arrow-right-to-bracket"></i><a
+                    href="SubPage/Login/loginPage.html" class="headlistitem_item"> Đăng Nhập</a></div>
+            <li class="headlistitem signined"><i class="fa-regular fa-user fa-bounce icon-header"></i><a href=""
                     class="headlistitem_item"> Đăng Kí</a></li>
+            <div id="userPopup", class="headlistitem" style="display: none;"></div>
         </ul>
+
+        <!-- Thông tin user -->
+        <div id="userinfo" , style="display: none; color: white; border-radius: 15px;">
+            <button class="fa-solid fa-xmark" , id="closeUserPopup" , style="background-color: rgba(0,0,0,0); 
+                    border: none;
+                    font-size: 20px;
+                    color: white; "></button>
+            <div id="userAVT"></div>
+            <div id="infouser">
+                <div id="username", style="font-size: 1.5rem;"></div>
+                <div id="nickname", style="font-size: 1rem; color: rgb(221, 221, 221);"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 10%;">
+                <div id="logout">Đăng Xuất</div>
+                <div id="changeavt">Thay avatar</div>
+            </div>
+        </div>
 
         <!-- Hộp Nhạc -->
         <div class="musicIcon" , style="margin-left: 0;" , id="thumbMusic" , onclick="openMusicPopup()"></div>
@@ -134,6 +152,7 @@
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="JS/userBox.js"></script>
     <script src="JS/main.js"></script>
     <script src="JS/musicBox.js"></script>
     <script src="JS/gacha.js"></script>
