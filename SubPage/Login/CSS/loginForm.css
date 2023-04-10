@@ -61,6 +61,14 @@
     color: rgb(200, 200, 200);
 }
 
+.notice {
+    margin-left: 2vi;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: red;
+}
+
+/* Phần Dưới */
 .userForm_forgotPass {
     font-size: 0.85rem;
     color: white;
