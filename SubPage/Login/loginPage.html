@@ -25,7 +25,7 @@
 
 
     <!-- Form Đăng Kí -->
-    <div class="userForm">
+    <div class="userForm" id="mainForm">
         <div id="scrollBox" , style="translate: none;">
             <div class="boxLogin">
                 <div class="userForm_headerForm">
@@ -42,30 +42,37 @@
                 <div class="operationBTN">
                     <div class="userForm_btnControl">Đăng Nhập</div>
                     <div style="display: flex; width: 100%; gap: 15px; text-align: end;">
-                        <div class="userForm_switchbtn">Đăng Ký</div>
+                        <div class="userForm_switchbtn" id="signupbtn">Đăng Ký</div>
                         <div class="userForm_forgotPass">Quên Mật Khẩu</div>
                     </div>
                 </div>
             </div>
-            <div class="boxCreate">
+            <div class="boxCreate", id="boxSwitch">
                 <div>
                     <div class="userForm_headerForm">
-                        <h3 class="userForm_heading">Đăng Nhập</h3>
+                        <h3 class="userForm_heading">Đăng Ký</h3>
                     </div>
                     <div class="userForm_Info">
+                        <div class="userForm_Layout">
+                            <input type="text" class="userInput" placeholder="Username">
+                        </div>
                         <div class="userForm_Layout">
                             <input type="text" class="userInput" placeholder="Tên đăng nhập">
                         </div>
                         <div class="userForm_Layout">
                             <input type="password" class="userInput" placeholder="Password">
                         </div>
+                        <div class="userForm_Layout">
+                            <input type="password" class="userInput" placeholder="Nhập Lại Password">
+                        </div>
                     </div>
-                    <div>
-                        <span class="userForm_switchbtn">Đăng Ký</span>
-                        <div class="userForm_forgotPass">Quên Mật Khẩu</div>
+                    <div class="operationBTN", style="gap: 20px;">
+                        <div class="userForm_btnControl">Đăng Nhập</div>
+                        <div style="display: flex; width: 100%; gap: 10px; text-align: end;">
+                            <div class="userForm_switchbtn" id="backlogin">Quay Về Đăng Nhập</div>
+                            <div class="userForm_forgotPass">Quên Mật Khẩu</div>
+                        </div>
                     </div>
-
-                    <div class="userForm_btnControl">Đăng Nhập</div>
                 </div>
                 <div>
 

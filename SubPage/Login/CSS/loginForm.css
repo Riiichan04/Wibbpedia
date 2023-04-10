@@ -16,6 +16,7 @@
     left: 37%;    
     width: 360px;
     align-items: center;
+    height: 250px;
 }
 
 .boxLogin, .boxCreate {
@@ -44,6 +45,7 @@
 }
 
 .userInput {
+    transition: all .1s linear;
     outline: 0;
     font-size: 1.2rem;
     color: white;
@@ -83,6 +85,7 @@
 }
 
 .userForm_btnControl {
+    transition: all .1s linear;
     font-size: 1rem;
     font-weight: 400;
     margin-top: 5%;
