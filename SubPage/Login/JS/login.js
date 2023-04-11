@@ -49,7 +49,8 @@ confirmBtn[0].onclick = async() => {
                         check = true
                         var localJSON = {
                             "name": myJSON[i]["nickname"],
-                            "username": myJSON[i]["username"]
+                            "username": myJSON[i]["username"],
+                            "avatar": myJSON[i]["avatar"]
                         }
                         localJSON = JSON.stringify(localJSON)
                         localStorage.setItem("info", localJSON)
@@ -57,7 +58,7 @@ confirmBtn[0].onclick = async() => {
                         setTimeout( ()=> {
                             notice[0].style.color = "#f29bd4"
                             notice[0].innerHTML = "Đăng nhập thành công!"
-                            window.location = `https://riiichan04.github.io/Wibbpedia/userPage.html`
+                            window.location = `https://riiichan04.github.io/Wibbpedia/userFeed.html`
                         }, 600)
                     }
                 }
@@ -130,7 +131,8 @@ confirmBtn[1].onclick = async() => {
             var postJSON = {
                 "username": userR.value.trim(),
                 "password": passR.value.trim(),
-                "nickname": nickR.value.trim()
+                "nickname": nickR.value.trim(),
+                "avatar": "https://media.tenor.com/oudJ-ckzZLMAAAAC/bocchi-the-rock-kita-ikuyo.gif"
             }
             getAPILogin(2, postJSON)
             waitCreate = true

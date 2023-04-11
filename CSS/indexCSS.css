@@ -278,3 +278,24 @@
 #logout:active, #changeavt:active {
     color: rgb(150, 150, 150);
 }
+
+#userAVT {
+    width: 27%;
+    height: 27%;
+    border-radius: 15px;
+}
+
+#infouser {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#userinfo {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}

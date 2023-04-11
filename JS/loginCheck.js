@@ -1,5 +1,6 @@
 //Check xem đăng nhập chưa
 var signed = document.getElementsByClassName("signined")
+var userAVT = document.getElementById("userAVT")
 if (localStorage.length > 0) {
     console.log(localStorage)
     signed[1].style.display = "none"
@@ -7,6 +8,7 @@ if (localStorage.length > 0) {
     const userPopup = document.getElementById("userPopup")
     userPopup.style.display = ""
     userPopup.innerHTML = `<i class="fa-regular fa-user icon-header"></i> <u class="headlistitem_item usertext", style="text-decoration: underline;"">${JSON.parse(localStorage.getItem('info')).username}</u>`
+    userAVT.src = JSON.parse(localStorage.getItem('info')).avatar
 }
 else {
     signed[1].style.display = ""
