@@ -42,6 +42,13 @@
     color: rgb(157, 0, 255);
 }
 
+.headlistitem_item:hover {
+    color: rgb(131, 0, 213);
+}
+.headlistitem_item:active {
+    color: rgb(98, 0, 158);
+}
+
 .musicIcon {
     background-color: rgb(0, 145, 255);
     width: 65px;
@@ -234,7 +241,9 @@
 #gacharesult, #protectgacha {
     background-color: rgb(224, 224, 224);
 }
-
+#gacharesult {
+    height: 16vi;
+}
 /* Popup User */
 #userPopup {
     cursor: pointer;

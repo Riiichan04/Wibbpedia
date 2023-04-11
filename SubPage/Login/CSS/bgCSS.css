@@ -18,3 +18,42 @@
     height: 100vh;
     width: 100vw;
 }
+.header {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headlist {
+    padding-left: 0;
+    margin: auto 20px;
+}
+
+.headlistitem {
+    font-size: 20px;
+    list-style: none;
+    margin: 0 5px;
+    display: inline;
+    color: orangered;
+}
+
+.headlistitem_item {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: rgb(157, 0, 255);
+}
+#musicBTN {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.headlistitem_item:hover {
+    color: rgb(131, 0, 213);
+}
+.headlistitem_item:active {
+    color: rgb(98, 0, 158);
+}

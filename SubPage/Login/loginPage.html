@@ -18,6 +18,22 @@
 </style>
 
 <body>
+    <div class="header">
+
+        <ul class="headlist">
+            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="https://riiichan04.github.io/Wibbpedia" class="headlistitem_item"> Trang
+                    Chủ</a></li>
+        </ul>
+
+        <ul class="headlist">
+            <li class="headlistitem">
+                <i class="fa-solid fa-compact-disc"></i>
+                <button class="headlistitem_item" id="musicBTN">Ngừng Nhạc</button>
+            </li>
+        </ul>
+    </div>
+
+
     <div id="bg-login">
         <img src="" alt="">
         <img src="" alt="">
@@ -33,10 +49,10 @@
                 </div>
                 <div class="userForm_Info">
                     <div class="userForm_Layout">
-                        <input type="text" class="userInput", id="logU" placeholder="Tên đăng nhập">
+                        <input type="text" class="userInput" , id="logU" placeholder="Tên đăng nhập">
                     </div>
                     <div class="userForm_Layout">
-                        <input type="password" class="userInput", id="passU" placeholder="Password">
+                        <input type="password" class="userInput" , id="passU" placeholder="Password">
                     </div>
                 </div>
                 <div class="notice"></div>
@@ -48,27 +64,27 @@
                     </div>
                 </div>
             </div>
-            <div class="boxCreate", id="boxSwitch">
+            <div class="boxCreate" , id="boxSwitch">
                 <div>
                     <div class="userForm_headerForm">
                         <h3 class="userForm_heading">Đăng Ký</h3>
                     </div>
                     <div class="userForm_Info">
                         <div class="userForm_Layout">
-                            <input type="text" class="userInput", id="nickR" placeholder="Username">
+                            <input type="text" class="userInput" , id="nickR" placeholder="Username">
                         </div>
                         <div class="userForm_Layout">
-                            <input type="text" class="userInput", id="useR" placeholder="Tên đăng nhập">
+                            <input type="text" class="userInput" , id="useR" placeholder="Tên đăng nhập">
                         </div>
                         <div class="userForm_Layout">
-                            <input type="password" class="userInput", id="passR" placeholder="Password">
+                            <input type="password" class="userInput" , id="passR" placeholder="Password">
                         </div>
                         <div class="userForm_Layout">
-                            <input type="password" class="userInput", id="rpeatR" placeholder="Nhập Lại Password">
+                            <input type="password" class="userInput" , id="rpeatR" placeholder="Nhập Lại Password">
                         </div>
                     </div>
                     <div class="notice"></div>
-                    <div class="operationBTN", style="gap: 20px;">
+                    <div class="operationBTN" , style="gap: 20px;">
                         <div class="userForm_btnControl">Đăng Ký</div>
                         <div style="display: flex; width: 100%; gap: 10px; text-align: end;">
                             <div class="userForm_switchbtn" id="backlogin">Quay Về Đăng Nhập</div>
@@ -83,10 +99,6 @@
         </div>
     </div>
 
-    <div style="background-color: white; color: purple; width: 5%;">
-        <a href="https://riiichan04.github.io/Wibbpedia" , style=" text-decoration: none;">Trang Chủ</a>
-        <button id="musicBTN">Ngừng Nhạc</button>
-    </div>
     <audio id="audio" src="Audio/GekkoyokuDAZBEECover.mp3" autoplay loop></audio>
 
     <script src="JS/login.js"></script>
