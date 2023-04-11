@@ -57,7 +57,7 @@ confirmBtn[0].onclick = async() => {
                         setTimeout( ()=> {
                             notice[0].style.color = "#f29bd4"
                             notice[0].innerHTML = "Đăng nhập thành công!"
-                            window.location = `https://riiichan04.github.io/Wibbpedia/index.html`
+                            window.location = `https://riiichan04.github.io/Wibbpedia/userPage.html`
                         }, 600)
                     }
                 }
