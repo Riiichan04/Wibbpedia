@@ -149,6 +149,7 @@
 
 .gachaframe {
     /* height: 30%; */
+    font-size: 17px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -242,7 +243,7 @@
     background-color: rgb(224, 224, 224);
 }
 #gacharesult {
-    height: 16vi;
+    height: 240px;
 }
 /* Popup User */
 #userPopup {

@@ -1,0 +1,118 @@
+.body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainbg {
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    background-image: url("https://cutewallpaper.org/22/anime-setting-wallpapers/1083114127.jpg"), url("https://cdn.discordapp.com/attachments/1069352694554312704/1069352701881761803/775137.gif");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+}
+
+/* Thanh Header */
+.header {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headlist {
+    padding-left: 0;
+    margin: auto 20px;
+}
+
+.headlistitem {
+    font-size: 20px;
+    list-style: none;
+    margin: 0 5px;
+    display: inline;
+    color: orangered;
+}
+
+.headlistitem_item {
+    text-decoration: none;
+    color: rgb(157, 0, 255);
+}
+
+.headlistitem_item:hover {
+    color: rgb(131, 0, 213);
+}
+.headlistitem_item:active {
+    color: rgb(98, 0, 158);
+}
+
+.musicIcon {
+    background-color: rgb(0, 145, 255);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 25px;
+    position: absolute;
+    float: right;
+    right: 10px;
+}
+
+.musicIcon:hover {
+    cursor: pointer;
+}
+
+.musicIconPopup {
+    background-color: rgb(0, 145, 255);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: solid;
+    border-color: gray;
+    right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#closePopup:hover, #closeUserPopup:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+#closePopup:active, #closeUserPopup:active {
+    color: rgb(78, 78, 78);
+}
+
+#popupMusic {
+    margin-right: 1.2%;
+    width: 25%;
+    background-color: rgb(47, 47, 47);
+    position: absolute;
+    right: 0;
+}
+
+@keyframes rorateDisk {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* Phần Chính Của Web */
+.frame {
+    display: flex;
+}
+
+.mainframe {
+    border-radius: 10px;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 200px;
+    /* margin-left: 10vw; */
+}
+/* Thành phần trên mainframe */
+

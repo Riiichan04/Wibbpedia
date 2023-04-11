@@ -287,7 +287,7 @@ function gacha() {
         video.setAttribute('id', 'videogacha')
         video.volume = 0.25
 
-        gacharesult.style.height = "16vi"
+        // gacharesult.style.height = "16vi"
         gacharesult.style.borderRadius = "0 0 10px 10px"
         gacharesult.style.backgroundRepeat = "no-repeat"
         gachabtn.style.pointerEvents = "none"
@@ -303,8 +303,8 @@ function gacha() {
             resultDiv.innerHTML = result[i] + "</br>"
             resultDiv.style.color = colorArr[i]
             gacharesult.appendChild(resultDiv)
-            // gacharesult.style.height = ""
         }
+        gacharesult.style.height = ''
         gachabtn.style.pointerEvents = "auto"
         document.getElementById("protectgacha").innerHTML = `Bảo hiểm của bạn còn ${80 - userGacha.get(user_id)} lượt`
     }, 6250)

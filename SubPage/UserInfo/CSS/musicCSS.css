@@ -1,0 +1,132 @@
+/* Music Box Mini */
+.mainMusicFrame {
+    border-radius: 10px;
+    width: 75vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 200px;
+    margin-left: 10vw;
+    
+}
+
+.musicMini {
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: rgb(96, 96, 96);
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+
+.musicType {
+    font-size: 20px;
+    display: flex;
+}
+
+.musicOperator {
+    display: flex
+}
+
+#musicPlay {
+    width: 100%;
+}
+
+#nameMusic {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* Các nút nhạc */
+#prevMusic, #nextMusic, #pauseMusic {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    margin-left: 10%;
+    font-size: 25px;
+    display: inline-block;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+#randomMusic {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 35%;
+    font-size: 25px;
+    display: inline-block;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+}
+/* Thanh progress */
+#progressMusic {
+    font-size: 18px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#timingProgress {
+    width: 100%;
+    height: 2vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-bottom: 1%;
+}
+
+#reallyProgress {
+    width: 0%;
+    height: 2vh;
+    background-color: rgba(0, 255, 200);
+    border-radius: 20px;
+}
+
+#expectProgress {
+    width: 0%;
+    height: 2vh;
+    background-color: rgba(128, 128, 128, 0.75);
+    border-radius: 20px;
+}
+
+/* Chỉnh âm lượng */
+#volValue {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+
+#volUp, #volDown {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    font-size: 25px;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: inline-block;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+
+#volUp, #volDown, #prevMusic, #pauseMusic, #nextMusic, #randomMusic, #volValue {
+    border-radius: 15px;
+}
+
+#volUp:hover, #volDown:hover, #prevMusic:hover, #pauseMusic:hover, #nextMusic:hover, #randomMusic:hover {
+    background-color: rgb(150, 150, 150);
+}
+
+#volUp:active, #volDown:active, #prevMusic:active, #pauseMusic:active, #nextMusic:active, #randomMusic:active {
+    background-color: rgb(200, 200, 200);
+}

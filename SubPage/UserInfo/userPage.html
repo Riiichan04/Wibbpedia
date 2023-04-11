@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wibbpedia</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/indexCSS.css">
+    <link rel="stylesheet" href="CSS/musicCSS.css">
+    <link rel="icon" href="https://i.pinimg.com/736x/4f/e9/4d/4fe94da2913bdc63a1f5c404f5fe0682.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body class="body mainbg">
+
+    <!-- Thanh Header -->
+    <div class="header">
+
+        <ul class="headlist">
+            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="" class="headlistitem_item"> Trang
+                    Chủ</a></li>
+            <li class="headlistitem"><i class="fa-solid fa-book"></i><a href="" class="headlistitem_item"> Thư Viện</a>
+            </li>
+            <li class="headlistitem"><i class="fa-sharp fa-solid fa-gamepad"></i><a href=""
+                    class="headlistitem_item">Game</a></li>
+            <li class="headlistitem"><i class="fa-solid fa-circle-info"></i><a href="" class="headlistitem_item"> Tin
+                    Tức</a></li>
+        </ul>
+
+        <ul class="headlist" , style="margin-right: 10%;">
+            <li class="headlistitem"><i class="fa-solid fa-flag"></i><a href="" class="headlistitem_item"> Thông Báo</a>
+            </li>
+            <div class="headlistitem signined"><i class="fa-solid fa-arrow-right-to-bracket"></i><a
+                    href="SubPage/Login/loginPage.html" class="headlistitem_item"> Đăng Nhập</a></div>
+            <li class="headlistitem signined"><i class="fa-regular fa-user fa-bounce icon-header"></i><a href=""
+                    class="headlistitem_item"> Đăng Kí</a></li>
+            <div id="userPopup" , class="headlistitem" style="display: none;"></div>
+        </ul>
+
+        <!-- Hộp Nhạc -->
+        <div class="musicIcon" , style="margin-left: 0;" , id="thumbMusic" , onclick="openMusicPopup()"></div>
+        <div id="popupMusic" , style="display: none; color: white; border-radius: 15px;">
+            <div style="backdrop-filter: blur(15px);">
+                <button class="fa-solid fa-xmark" , id="closePopup" , style="background-color: rgba(0,0,0,0); 
+                    border: none;
+                    font-size: 30px;
+                    color: white; "></button>
+                <div class="musicIconPopup" , id="thumbMusicPopup"></div>
+                <p id="nameMusic"></p>
+                <div class="progressvolume">
+                    <div id="progressMusic"></div>
+                </div>
+                <div id="timingProgress" style="margin-bottom: 0.5%; margin-top: 1%;">
+                    <div id="reallyProgress"></div>
+                </div>
+                <div class="musicOperator">
+                    <button id="volDown" class="fa-solid fa-volume-low"></button>
+                    <div id="volValue" , style="user-select: none;">10</div>
+                    <button id="volUp" class="fa-solid fa-volume-high"></button>
+                </div>
+                <audio id="musicPlay" , src=""></audio>
+                <div class="musicOperator">
+                    <button id="prevMusic"><i class="fa-solid fa-backward"></i></button>
+                    <button id="pauseMusic" , class="fa-solid fa-play"></button>
+                    <button id="nextMusic"><i class="fa-solid fa-forward"></i></button>
+                </div>
+                <button id="randomMusic" , style="margin-bottom: 10px;"><i class="fa-solid fa-shuffle"></i> Phát Ngẫu
+                    Nhiên</button>
+            </div>
+        </div>
+    </div>
+    <!-- Khu Vực Chính -->
+    <div class="frame">
+        <div class="mainframe"></div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="JS/musicBox.js"></script>
+</body>
+
+</html>
