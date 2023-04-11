@@ -25,4 +25,5 @@ logout.addEventListener("click", () => {
     signed[0].style.display = ""
     userinfo.style.display = "none"
     userPopup.style.display = "none"
+    window.location = `https://riiichan04.github.io/Wibbpedia`
 })
