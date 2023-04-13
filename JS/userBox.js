@@ -18,6 +18,10 @@ userPopup.addEventListener("click", () => {
 closeUserPopup.addEventListener("click", () => {
     userinfo.style.display = "none"
 })
+//Thay AVT
+changeavt.addEventListener("click", () => {
+    window.location = "https://riiichan04.github.io/Wibbpedia/SubPage/UserInfo/userPage.html"
+})
 //Đăng Xuất
 logout.addEventListener("click", () => {
     localStorage.clear()

@@ -19,7 +19,7 @@ const passRR = document.getElementById("rpeatR")
 signUpBtn.onclick = () => {
     trans.style.translate = "-380px 0"
     mainframe.style.height = "380px"
-    mainframe.style.width = "450px"
+    mainframe.style.width = "400px"
     boxSwitch.style.width = "425px"
 }
 

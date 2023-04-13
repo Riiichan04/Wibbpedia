@@ -4,6 +4,7 @@
 <head>
     <title>Wibbpedia</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/infoUserPg.css">
     <link rel="stylesheet" href="CSS/indexCSS.css">
     <link rel="stylesheet" href="CSS/musicCSS.css">
     <link rel="icon" href="https://i.pinimg.com/736x/4f/e9/4d/4fe94da2913bdc63a1f5c404f5fe0682.jpg">
@@ -18,7 +19,7 @@
     <div class="header">
 
         <ul class="headlist">
-            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="" class="headlistitem_item"> Trang
+            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="https://riiichan04.github.io/Wibbpedia/userFeed.html" class="headlistitem_item"> Trang
                     Chủ</a></li>
             <li class="headlistitem"><i class="fa-solid fa-book"></i><a href="" class="headlistitem_item"> Thư Viện</a>
             </li>
@@ -90,10 +91,28 @@
     </div>
     <!-- Khu Vực Chính -->
     <div class="frame">
-        <div class="mainframe"></div>
+        <div class="mainframe">
+            <div style="font-size: 1.4rem; color:rosybrown; margin-bottom: 2.5%;">THÔNG TIN NGƯỜI DÙNG</div>
+            <div class="infoBox">
+                <img id="infoBox_avatar" src="" alt="">
+                <div id="infoBox_info">
+                    <div id="userName"></div>
+                    <div id="nickName"></div>
+                </div>
+            </div>
+            <!-- <div class="detailInfo">
+                <h4>Thay AVT: </h4>
+                <input id="changeavt" type="text", placeholder="Nhập URL avatar bạn muốn thay">
+            </div> -->
+            <!-- <div class="resultavt">
+                <div id="result"></div>
+                <div id="confirmChangeAvt">XÁC NHẬN</div>
+            </div> -->
+        </div>
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="JS/userPgJS.js"></script>
     <script src="JS/loginCheck.js"></script>
     <script src="JS/musicBox.js"></script>
     <script src="JS/userBox.js"></script>
