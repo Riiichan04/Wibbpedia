@@ -1,0 +1,30 @@
+#ListDictionary {
+    user-select: none;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: indigo;
+    margin-bottom: 1.5%;
+}
+
+#ListDictionary_Info {
+    user-select: none;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+#ListDictionary_Title--Pokemon {
+    /* user-select: none; */
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: midnightblue;
+    margin-bottom: 1%;
+}
+
+#ListDictionary_List--Pokemon {
+    font-size: 1rem;
+    color: darkslateblue;
+}
+
+.ListDictionary_Item {
+    margin: 0 0 2% 10%;
+}
