@@ -55,15 +55,17 @@ async function getAPILogin(type, x) {
             value = data
         }))
     }
-    if (type == 4) {
-        await fetch("https://643306c5d0127730d2dfbfe7.mockapi.io/UserOperator", {
-            method: 'PUT',
-            headers: {'content-type': 'application.json'},
-            body: JSON.stringify(x)
-        }).then(res => res.json().then(data => {
-            value = data
-        }))
-    }
-
     return value
+}
+
+//Gọi API để update thông tin
+async function updateAvatarAPI(id, url) {
+    var updateInfo = { "avatar": url}
+    await fetch(`https://643306c5d0127730d2dfbfe7.mockapi.io/UserOperator/${id}`, {
+        method: 'PUT',
+        headers: { 'content-type': 'application/json'},
+        body: JSON.stringify(updateInfo)
+    })
+    .then(res => res.json())
+    .then(data => {value = data})
 }

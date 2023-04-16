@@ -21,12 +21,41 @@
 }
 
 .detailInfo {
+    margin-top: 5%;
     display: flex;
     align-items: center;
+    gap: 10%;
 }
 
-#changeavt {
+#inputText {
     margin-left: 5%;
     height: 30%;
-    width: 30%;
+    width: 50%;
+    border: 0;
+    border-bottom: solid 2px;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: rgb(169, 169, 169);
+}
+
+.detailBTN {
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-weight: 500;
+    font-size: 1.05rem;
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+    border-radius: 10px;
+    padding: 3px;
+    color: white;
+    background-image: linear-gradient(to top left, orange, purple);
+}
+.detailBTN:hover {
+    background-image: linear-gradient(orange, orange);
+}
+.detailBTN:active {
+    background-image: linear-gradient(purple, purple);
 }

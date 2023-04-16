@@ -4,6 +4,7 @@
 <head>
     <title>Wibbpedia</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/popupCSS.css">
     <link rel="stylesheet" href="CSS/infoUserPg.css">
     <link rel="stylesheet" href="CSS/indexCSS.css">
     <link rel="stylesheet" href="CSS/musicCSS.css">
@@ -19,7 +20,8 @@
     <div class="header">
 
         <ul class="headlist">
-            <li class="headlistitem"><i class="fa-solid fa-house"></i><a href="https://riiichan04.github.io/Wibbpedia/userFeed.html" class="headlistitem_item"> Trang
+            <li class="headlistitem"><i class="fa-solid fa-house"></i><a
+                    href="https://riiichan04.github.io/Wibbpedia/userFeed.html" class="headlistitem_item"> Trang
                     Chủ</a></li>
             <li class="headlistitem"><i class="fa-solid fa-book"></i><a href="" class="headlistitem_item"> Thư Viện</a>
             </li>
@@ -34,8 +36,8 @@
             </li>
             <div class="headlistitem signined"><i class="fa-solid fa-arrow-right-to-bracket"></i><a
                     href="../Login/loginPage.html" class="headlistitem_item"> Đăng Nhập</a></div>
-            <li class="headlistitem signined"><i class="fa-regular fa-user fa-bounce icon-header"></i><a href=../Login/loginPage.html"
-                    class="headlistitem_item"> Đăng Kí</a></li>
+            <li class="headlistitem signined"><i class="fa-regular fa-user fa-bounce icon-header"></i><a
+                    href=../Login/loginPage.html" class="headlistitem_item"> Đăng Kí</a></li>
             <div id="userPopup" , class="headlistitem" style="display: none;"></div>
         </ul>
 
@@ -49,7 +51,7 @@
                 <img id="userAVT" src="" alt="">
                 <div>
                     <div id="username" , style="font-size: 1.5rem;"></div>
-                    <div id="nickname" , style="font-size: 1rem; color: rgb(221, 221, 221);"></div>    
+                    <div id="nickname" , style="font-size: 1rem; color: rgb(221, 221, 221);"></div>
                 </div>
             </div>
             <div id="userControl" style="display: flex; justify-content: space-between; margin-top: 10%;">
@@ -100,14 +102,31 @@
                     <div id="nickName"></div>
                 </div>
             </div>
-            <!-- <div class="detailInfo">
-                <h4>Thay AVT: </h4>
-                <input id="changeavt" type="text", placeholder="Nhập URL avatar bạn muốn thay">
-            </div> -->
-            <!-- <div class="resultavt">
-                <div id="result"></div>
-                <div id="confirmChangeAvt">XÁC NHẬN</div>
-            </div> -->
+            <div style="text-align: center; font-size: 1.2rem; color:palevioletred; margin-bottom: 2.5%;">CÁC MỤC CẦN
+                THAY ĐỔI</div>
+            <div class="detailInfo" , style="margin-left: 5%;">
+                <div class="detailBTN" , id="changeAVT">Thay AVT </div>
+                <div class="detailBTN" , id="changeUN">Thay Username </div>
+                <div class="detailBTN" , id="changeSN">Thay Tên Đăng Nhập</div>
+                <div class="detailBTN" , id="changePASS">Thay Mật Khẩu</div>
+            </div>
+        </div>
+        <div class="popupFilter" , style="display: none;">
+            <div class="popupChange" id="popupAVT" , style="display: none;">
+                <p class="titlePopup">Thay avatar</p>
+                <hr>
+                <p style="font-size: 1.2rem; margin-left: 2%;">Dán link avatar bạn muốn đổi:</p>
+                <input type="text" id="inputText" placeholder="Nhập URL Avatar cần thay">
+                <div id="avtFrame">
+                </div>
+                <img id="previewAvt" src="">
+                <p class="notice"></p>
+                <div class="buttonControl" id="cancelAVT">Hủy</div>
+                <div class="buttonControl" id="confirmAVT">Lưu</div>
+            </div>
+            <div class="popupChange" id="popupUN" , style="display: none;"></div>
+            <div class="popupChange" id="popupUS" , style="display: none;"></div>
+            <div class="popupChange" id="popupPASS" , style="display: none;"></div>
         </div>
     </div>
 
@@ -117,4 +136,5 @@
     <script src="JS/musicBox.js"></script>
     <script src="JS/userBox.js"></script>
 </body>
+
 </html>

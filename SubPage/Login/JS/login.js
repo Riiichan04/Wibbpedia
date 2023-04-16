@@ -152,25 +152,25 @@ async function getAPILogin(type, x) {
         await fetch("https://643306c5d0127730d2dfbfe7.mockapi.io/UserOperator", {
             method: 'GET',
             headers: { 'content-type': 'application/json'}
-        }).then(res => res.json().then(data => {
-            value = data
-        }))
+        })
+        .then(res => res.json())
+        .then(data => {value = data})
     }
     if (type == 2) {
         await fetch("https://643306c5d0127730d2dfbfe7.mockapi.io/UserOperator", {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(x)
-        }).then(res => res.json().then(data => {
-            value = data
-        }))
+        })
+        .then(res => res.json())
+        .then(data => {value = data})
     }
     if (type == 3) {
         await fetch("https://643306c5d0127730d2dfbfe7.mockapi.io/UserOperator", {
             method: 'DELETE'
-        }).then(res => res.json().then(data => {
-            value = data
-        }))
+        })
+        .then(res => res.json())
+        .then(data => {value = data})
     }
 
     return value

@@ -111,8 +111,9 @@
     border-radius: 10px;
     width: 50vw;
     background-color: rgba(255, 255, 255, 0.85);
+    /* margin-left: 30vw; */
+    margin: auto;
     margin-top: 200px;
-    margin-left: 30vw;
 }
 /* Thành phần trên mainframe */
 /* Popup User */
