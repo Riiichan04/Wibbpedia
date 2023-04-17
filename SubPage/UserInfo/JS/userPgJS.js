@@ -9,6 +9,11 @@ const changeUN = document.getElementById("changeUN")
 const changeSN = document.getElementById("changeSN")
 const changePASS = document.getElementById("changePASS")
 
+//Tạm Disable 3 chức năng còn lại
+changeUN.disabled = true
+changeSN.disabled = true
+changePASS.disabled = true
+
 //Nền khi mở popup
 const popupFilter = document.getElementById("popupFilter")
 //ListPopup
@@ -80,10 +85,30 @@ async function checkID() {
         }
     }
 }
+
+//Chọn hình ảnh từ file
+// function previewFile() {
+//     isAvatar = false
+//     isLoaded = false
+//     const file = document.querySelector('input[type=file]').files[0];
+//     const reader = new FileReader();
+
+//     reader.addEventListener("load", function () {
+//         previewAvt.src = reader.result;
+//         inputText.disabled = true
+//         isAvatar = true
+//         isLoaded = true
+//     }, false);
+
+//     if (file) {
+//         reader.readAsDataURL(file);
+//     }
+// }
+
 //Xác nhận thayAVT
 confirmAVT.addEventListener('click', () => {
-    if (inputText.value.trim() == "") {
-        errAVT.textContent = "Chưa có URL!"
+    if (inputText.value.trim() == "") { //document.querySelector('input[type=file]') == ""
+        errAVT.textContent = "Chưa có hình ảnh"
     }
     else if (isAvatar == false || isLoaded == false) {
         errAVT.textContent = "URL bạn nhập không phải hình ảnh!"
@@ -103,6 +128,8 @@ confirmAVT.addEventListener('click', () => {
             localStorage.setItem('info', JSON.stringify(updateJSON))
             popupFilter.style.display = "none"
             popupAVT.style.display = "none"
+            notice.textContent = ""
+            errAVT.textContent = ""
             userAVT.src = JSON.parse(localStorage.getItem('info')).avatar
             previewAvt.src = JSON.parse(localStorage.getItem('info')).avatar
             avtBox.src = JSON.parse(localStorage.getItem('info')).avatar
