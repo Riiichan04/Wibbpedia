@@ -48,7 +48,7 @@
                 <img id="userAVT" src="" alt="">
                 <div>
                     <div id="username" , style="font-size: 1.5rem;"></div>
-                    <div id="nickname" , style="font-size: 1rem; color: rgb(221, 221, 221);"></div>    
+                    <div id="nickname" , style="font-size: 1rem; color: rgb(221, 221, 221);"></div>
                 </div>
             </div>
             <div id="userControl" style="display: flex; justify-content: space-between; margin-top: 10%;">
@@ -134,7 +134,31 @@
                     <h2 id="gachatitle"></h2>
                     <p id="gachaparagraph"></p>
                 </div>
-                <div>
+            </div>
+            <div class="musicFrame">
+                <h4 style="padding-top: 15px ;font-size: 25px; background-image: linear-gradient(to bottom right, rgb(0, 179, 255), rgb(0, 255, 195)); margin-top: 0; margin-bottom: 5px; border-radius: 5px; color: rgb(244, 244, 244); margin-bottom: 0;">
+                    Góc Âm Nhạc</h4>
+                <div >
+                    <div id="albumMusic", style="float: left; width: 50%;">
+                        <h5 class="musicTitleNews"><u>Album của Ngày</u></h5>
+                        <a href="" class="infonews">Sự đổi mới trong phong cách của YOASOBI</a>
+                        <!-- <a href="" class="infonews">Idol - Một cú hit mới của Ayase/YOASOBI</a>
+                        <a href="" class="infonews">Fujii Kaze trở lại cùng một diện mạo già dặn hơn</a>
+                        <a href="" class="infonews">Nightcord at 25h chuẩn bị ra mắt Album thứ 4</a>
+                        <a href="" class="infonews">Sự đổi mới trong phong cách của YOASOBI</a>
+                        <a href="" class="infonews">Idol - Một cú hit mới của Ayase/YOASOBI</a>
+                        <a href="" class="infonews">Fujii Kaze trở lại cùng một diện mạo già dặn hơn</a>
+                        <a href="" class="infonews">Nightcord at 25h chuẩn bị ra mắt Album thứ 4</a> -->
+
+
+                    </div>
+                    <div id="musicNews" class="newsBox" style="width: 49.3%;float: left; border: solid 2px; border-radius: 7px; border-left: 0;">
+                        <h5 class="musicTitleNews"><u>Tin tức Âm nhạc</u></h5>
+                        <a href="" class="infonews">Sự đổi mới trong phong cách của YOASOBI</a>
+                        <a href="" class="infonews">Idol - Một cú hit mới của Ayase/YOASOBI</a>
+                        <a href="" class="infonews">Fujii Kaze trở lại cùng một diện mạo già dặn hơn</a>
+                        <a href="" class="infonews">Nightcord at 25h chuẩn bị ra mắt Album thứ 4</a>
+                    </div>
                     
                 </div>
             </div>
@@ -155,6 +179,16 @@
         </div>
     </div>
 
+    <script>
+        function setHeight() {
+            if (document.getElementById("musicNews").clientHeight < document.getElementById("albumMusic").clientHeight) {
+                document.getElementById("musicNews").style.height = `${document.getElementById("albumMusic").clientHeight}px`
+            }
+            else document.getElementById("albumMusic").style.height = `${document.getElementById("musicNews").clientHeight}px`
+        }
+        setHeight()
+    </script>
+    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="JS/userBox.js"></script>
     <script src="JS/main.js"></script>

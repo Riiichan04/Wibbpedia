@@ -45,6 +45,7 @@
 .headlistitem_item:hover {
     color: rgb(131, 0, 213);
 }
+
 .headlistitem_item:active {
     color: rgb(98, 0, 158);
 }
@@ -76,12 +77,14 @@
     margin-right: auto;
 }
 
-#closePopup:hover, #closeUserPopup:hover {
+#closePopup:hover,
+#closeUserPopup:hover {
     cursor: pointer;
     color: gray;
 }
 
-#closePopup:active, #closeUserPopup:active {
+#closePopup:active,
+#closeUserPopup:active {
     color: rgb(78, 78, 78);
 }
 
@@ -97,6 +100,7 @@
     from {
         rotate: 0deg;
     }
+
     to {
         rotate: 360deg;
     }
@@ -161,7 +165,7 @@
 .hotnewsframe {
     width: 100%;
     border-width: 10px;
-    border: double;    
+    border: double;
     border-color: aquamarine;
     border-radius: 10px;
 }
@@ -228,34 +232,43 @@
     font-size: 20px;
     background-color: darkcyan;
     color: white;
-    text-align: center;   
+    text-align: center;
     user-select: none;
 }
+
 #gachabutton:hover {
     cursor: pointer;
     background-color: rgb(0, 94, 94);
 }
+
 #gachabutton:active {
     background-color: rgb(0, 81, 81);
 
 }
-#gacharesult, #protectgacha {
+
+#gacharesult,
+#protectgacha {
     background-color: rgb(224, 224, 224);
 }
+
 #gacharesult {
     height: 240px;
 }
+
 /* Popup User */
 #userPopup {
     cursor: pointer;
     user-select: none;
 }
+
 .usertext:hover {
     color: rgb(191, 0, 255);
 }
+
 .usertext:active {
     color: #ff00ff;
 }
+
 #userinfo {
     margin-top: 70px;
     position: absolute;
@@ -270,13 +283,19 @@
     margin-left: auto;
     margin-right: auto;
 }
-#logout, #changeavt {
+
+#logout,
+#changeavt {
     cursor: pointer;
 }
-#logout:hover, #changeavt:hover {
+
+#logout:hover,
+#changeavt:hover {
     color: rgb(218, 218, 218);
 }
-#logout:active, #changeavt:active {
+
+#logout:active,
+#changeavt:active {
     color: rgb(150, 150, 150);
 }
 
@@ -295,8 +314,25 @@
 
 #userinfo {
     text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.musicTitleNews {
+    height: 30px;
+    background-color: gray;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(240, 240, 240);
+    padding-top: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#albumMusic {
+    display: grid;
+    border: solid 2px;
+    border-radius: 7px;
 }
