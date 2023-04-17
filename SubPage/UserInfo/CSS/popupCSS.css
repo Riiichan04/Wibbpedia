@@ -1,4 +1,4 @@
-.popupFilter {
+#popupFilter {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -29,6 +29,10 @@
 }
 
 /* ChangeAVT */
+#errAVT {
+    font-size: 17px;
+    color: red;
+}
 #closeChangePopup {
     top: 0;
 }

@@ -111,16 +111,17 @@
                 <div class="detailBTN" , id="changePASS">Thay Mật Khẩu</div>
             </div>
         </div>
-        <div class="popupFilter" , style="display: none;">
+        <div id="popupFilter" , style="display: none;">
             <div class="popupChange" id="popupAVT" , style="display: none;">
                 <p class="titlePopup">Thay avatar</p>
                 <hr>
                 <p style="font-size: 1.2rem; margin-left: 2%;">Dán link avatar bạn muốn đổi:</p>
                 <input type="text" id="inputText" placeholder="Nhập URL Avatar cần thay">
+                <div id="errAVT"></div>
                 <div id="avtFrame">
                 </div>
                 <img id="previewAvt" src="">
-                <p class="notice"></p>
+                <p id="notice"></p>
                 <div class="buttonControl" id="cancelAVT">Hủy</div>
                 <div class="buttonControl" id="confirmAVT">Lưu</div>
             </div>
