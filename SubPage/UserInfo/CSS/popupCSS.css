@@ -67,7 +67,10 @@
     background-color: rgb(198, 198, 198);
 }
 #notice {
+    position: absolute;
     font: 17px;
+    color: aqua;
+    bottom: 40px
 }
 #confirmAVT {
     padding-top: 1%;
