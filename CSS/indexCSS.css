@@ -339,4 +339,13 @@
 
 .musicOfTheDay {
     margin-top: 2px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+}
+.musicOfTheDay:hover {
+    color: rgb(105, 105, 105);
+}
+.musicOfTheDay:active {
+    color: rgb(170, 170, 170);
 }
