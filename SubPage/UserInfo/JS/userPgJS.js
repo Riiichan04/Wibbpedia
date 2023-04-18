@@ -50,6 +50,7 @@ cancelAVT.addEventListener('click', () => {
     popupAVT.style.display = "none"
     previewAvt.src = JSON.parse(localStorage.getItem('info')).avatar
     notice.innerText = ""
+    inputText.value = ""
 })
 
 let url = inputText.value.trim()
@@ -87,27 +88,30 @@ async function checkID() {
 }
 
 //Chọn hình ảnh từ file
-// function previewFile() {
-//     isAvatar = false
-//     isLoaded = false
-//     const file = document.querySelector('input[type=file]').files[0];
-//     const reader = new FileReader();
+function previewFile() {
+    isAvatar = false
+    isLoaded = false
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
 
-//     reader.addEventListener("load", function () {
-//         previewAvt.src = reader.result;
-//         inputText.disabled = true
-//         isAvatar = true
-//         isLoaded = true
-//     }, false);
+    reader.addEventListener("load", function () {
+        previewAvt.src = reader.result;
+        inputText.disabled = true
+        isAvatar = true
+        isLoaded = true
+        inputText.value = reader.result
+        console.log(reader.result)
+    }, false);
 
-//     if (file) {
-//         reader.readAsDataURL(file);
-//     }
-// }
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+    
+}
 
 //Xác nhận thayAVT
 confirmAVT.addEventListener('click', () => {
-    if (inputText.value.trim() == "") { //document.querySelector('input[type=file]') == ""
+    if (inputText.value.trim() == "" && document.querySelector('input[type=file]') == "") { //
         errAVT.textContent = "Chưa có hình ảnh"
     }
     else if (isAvatar == false || isLoaded == false) {
