@@ -23,7 +23,7 @@ nameAlbum.push("Kirari - Fujii Kaze")
 nameAlbum.push("NIGHT DANCER - DAZBEE Cover")
 nameAlbum.push("Overdose - Ado Cover")
 nameAlbum.push("fish in the pool - DAZBEE Cover")
-nameAlbum.push("Kanade Tomosu Sore - Yoisaki Kanade")
+nameAlbum.push("Kanade Tomosu Sora - Yoisaki Kanade")
 nameAlbum.push("Asu no Yozora Shoukaihan - Hoshino Ichika")
 nameAlbum.push("Matsuri - Fujii Kaze")
 nameAlbum.push("Zamza - Nightcord at 25h ft.KAITO")
@@ -240,6 +240,56 @@ closePopup.addEventListener("click", () => {
 })
 
 
+//Chọn ngẫu nhiên nhạc làm album của ngày:
+// const musicDay = document.getElementById("musicDay")
+const albumMusic = document.getElementById("albumMusic")
+let arrRan = new Array()
+async function musicOfDay() {
+    var pickRanArr = new Array()
+    for (var i = 0; i < 5; i++) {
+        var ran = Math.floor(Math.random() * musicList.length)
+        while (arrRan.includes(ran)) {
+            ran = Math.floor(Math.random() * musicList.length)
+        }
+        arrRan.push(ran)
+        pickRanArr[i] = musicList[arrRan[i]]
+        var musicDayDiv = document.createElement('div')
+        musicDayDiv.className = "musicOfTheDay"
+        musicDayDiv.textContent = `${i+1}. ${nameAlbum[arrRan[i]].substring(0, nameAlbum[arrRan[i]].indexOf(" - "))}`
+        albumMusic.appendChild(musicDayDiv)
+
+
+    }
+    // for (var i = 0; i < 5; i++) {
+
+    addClickMusicAlbum(0)
+    addClickMusicAlbum(1)
+    addClickMusicAlbum(2)
+    addClickMusicAlbum(3)
+    addClickMusicAlbum(4)
+}
+function addClickMusicAlbum(i) {
+    var musicOfTheDay = document.getElementsByClassName("musicOfTheDay")
+    musicOfTheDay[i].addEventListener('click', () => {
+        openMusicPopup()
+        ranIndex = arrRan[i]
+        ranMusic = musicList[ranIndex]
+        document.getElementById("musicPlay").src = ranMusic
+        document.getElementById("nameMusic").innerHTML = `Đang phát <b>${nameAlbum[ranIndex]}</b>`
+
+        musicPlay.play()
+        pauseMusic.className = "fa-solid fa-pause"
+        document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
+        thumbMusic.style.animation = "rorateDisk 5s linear infinite"
+        thumbPopup.style.animation = "rorateDisk 5s linear infinite"
+
+        thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    })
+}
+
+musicOfDay()
 thumbnailMusic()
 randomMusic()
 checkPlayedMusic()
