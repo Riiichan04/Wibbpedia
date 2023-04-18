@@ -75,8 +75,6 @@ inputText.oninput = async () => {
 
 const nickN = JSON.parse(localStorage.getItem('info')).name
 const userN = JSON.parse(localStorage.getItem('info')).username
-
-
 let id = 0
 async function checkID() {
     const myJSON = await getAPILogin()
@@ -107,6 +105,8 @@ function previewFile() {
     }
     
 }
+
+
 
 //Xác nhận thayAVT
 confirmAVT.addEventListener('click', () => {
