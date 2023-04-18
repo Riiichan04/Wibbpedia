@@ -102,7 +102,6 @@ function previewFile() {
         inputText.value = reader.result
         console.log(reader.result)
     }, false);
-
     if (file) {
         reader.readAsDataURL(file);
     }
