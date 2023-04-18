@@ -50,7 +50,9 @@ confirmBtn[0].onclick = async() => {
                         var localJSON = {
                             "name": myJSON[i]["nickname"],
                             "username": myJSON[i]["username"],
-                            "avatar": myJSON[i]["avatar"]
+                            "avatar": myJSON[i]["avatar"],
+                            "level": myJSON[i]["level"],
+                            "exp": myJSON[i]["exp"]
                         }
                         localJSON = JSON.stringify(localJSON)
                         localStorage.setItem("info", localJSON)
@@ -132,7 +134,9 @@ confirmBtn[1].onclick = async() => {
                 "username": userR.value.trim(),
                 "password": passR.value.trim(),
                 "nickname": nickR.value.trim(),
-                "avatar": "https://media.tenor.com/oudJ-ckzZLMAAAAC/bocchi-the-rock-kita-ikuyo.gif"
+                "avatar": "https://media.tenor.com/oudJ-ckzZLMAAAAC/bocchi-the-rock-kita-ikuyo.gif",
+                "level": 1,
+                "exp": 0
             }
             getAPILogin(2, postJSON)
             waitCreate = true

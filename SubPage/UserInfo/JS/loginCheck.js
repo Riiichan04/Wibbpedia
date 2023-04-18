@@ -7,7 +7,7 @@ if (localStorage.length > 0) {
     signed[0].style.display = "none"
     const userPopup = document.getElementById("userPopup")
     userPopup.style.display = ""
-    userPopup.innerHTML = `<i class="fa-regular fa-user icon-header"></i> <u class="headlistitem_item usertext", style="text-decoration: underline;"">${JSON.parse(localStorage.getItem('info')).username}</u>`
+    userPopup.innerHTML = `<i class="fa-regular fa-user icon-header"></i> <u class="headlistitem_item usertext", style="text-decoration: underline;"">${JSON.parse(localStorage.getItem('info')).name}</u>`
     userAVT.src = JSON.parse(localStorage.getItem('info')).avatar
 }
 else {

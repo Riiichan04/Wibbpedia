@@ -8,8 +8,8 @@ const username = document.getElementById("username")
 const nickname = document.getElementById("nickname")
 
 //Thông tin trên popup
-username.innerHTML = JSON.parse(localStorage.getItem('info')).username
-nickname.innerHTML = "@"+JSON.parse(localStorage.getItem('info')).name
+nickname.innerHTML = "@"+JSON.parse(localStorage.getItem('info')).username
+username.innerHTML = JSON.parse(localStorage.getItem('info')).name
 //Mở popup
 userPopup.addEventListener("click", () => {
     userinfo.style.display = ""

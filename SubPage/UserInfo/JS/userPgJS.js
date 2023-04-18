@@ -34,8 +34,8 @@ const confirmAVT = document.getElementById("confirmAVT")
 
 //Nạp hình và thông tin vào userbox
 avtBox.src = JSON.parse(localStorage.getItem('info')).avatar
-userName.innerHTML = JSON.parse(localStorage.getItem('info')).username
-nickName.innerHTML ="@" + JSON.parse(localStorage.getItem('info')).name
+nickName.innerHTML ="@" +  JSON.parse(localStorage.getItem('info')).username
+userName.innerHTML =JSON.parse(localStorage.getItem('info')).name
 
 //Mở popup thayAVT
 changeAVT.addEventListener('click', () => {
@@ -98,7 +98,6 @@ function previewFile() {
         isAvatar = true
         isLoaded = true
         inputText.value = reader.result
-        console.log(reader.result)
     }, false);
     if (file) {
         reader.readAsDataURL(file);

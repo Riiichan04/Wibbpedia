@@ -5,6 +5,8 @@
 #infoBox_avatar {
     width: 10%;
     margin-left: 10%;
+    border-radius: 10px;
+    border: solid 1px;
 }
 
 #infoBox_info {
