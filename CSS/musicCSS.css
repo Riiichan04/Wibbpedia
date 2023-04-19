@@ -54,14 +54,14 @@
 #randomMusic {
     background-color: rgb(118, 118, 118);
     color: rgb(255, 255, 255);
-    width: 35%;
-    font-size: 25px;
     display: inline-block;
     border: solid;
     border-color: rgb(74, 74, 74);
-    width: 100%;
+    margin-left: 10%;
+    width: 80%;
     font-size: 22px;
     text-align: center;
+
 }
 /* Thanh progress */
 #progressMusic {
@@ -129,4 +129,48 @@
 
 #volUp:active, #volDown:active, #prevMusic:active, #pauseMusic:active, #nextMusic:active, #randomMusic:active {
     background-color: rgb(200, 200, 200);
+}
+/* #showAlbumBTN {
+    font-size: 30px;
+    text-align: center;
+}
+#showAlbumBTN:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+#showAlbumBTN:active {
+    background-color: rgba(128, 128, 128, 0.4);
+}
+*/
+.itemSong {
+    border: solid;
+    border-width: 0 0 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    height: fit-content;
+    gap: 5px;
+}
+
+.subIMG {
+    margin: 5px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    /* flex-shrink: 0; */
+    overflow: hidden;
+}
+.nameSong {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+.singer {
+    font-size: 0.8rem;
+} 
+.info--song:hover {
+    color: rgb(114, 114, 114);
+}
+.info--song:active {
+    color: rgb(173, 173, 173);
 }

@@ -70,11 +70,23 @@
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    border: solid;
+    border: solid 2px;
     border-color: gray;
     right: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#closePopup,
+#closeUserPopup {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 30px;
+    color: white
+}
+
+#closeUserPopup {
+    font-size: 20px;
 }
 
 #closePopup:hover,
@@ -161,6 +173,35 @@
     border-color: aquamarine;
     border-style: double;
 }
+
+#leftMusicFrame {
+    border-width: 5px;
+    border-style: double;
+    border-color: aquamarine;
+}
+
+#listMusicFrame {
+    height: 20rem;
+    overflow-y: scroll;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #c5c5c5;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #626262;
+    border-radius: 20px;
+}
+
 
 .hotnewsframe {
     width: 100%;
@@ -343,9 +384,11 @@
     user-select: none;
     font-size: 16px;
 }
+
 .musicOfTheDay:hover {
     color: rgb(105, 105, 105);
 }
+
 .musicOfTheDay:active {
     color: rgb(170, 170, 170);
 }

@@ -39,7 +39,7 @@ nameAlbum.push("OnajiHanashi - Kain & Blanc Cover")
 var imgAlbum = new Array()
 imgAlbum.push("BackupData/IMG/AudioIMG/Kirari.jpg")
 imgAlbum.push("BackupData/IMG/AudioIMG/NIGHTDANCER.jpg")
-imgAlbum.push("BackupData/IMG/AudioIMG/AdoOverdose.jpg")
+imgAlbum.push("BackupData/IMG/AudioIMG/OverdoseAdo.jpg")
 imgAlbum.push("BackupData/IMG/AudioIMG/fish_in_the_pool.jpg")
 imgAlbum.push("BackupData/IMG/AudioIMG/KanadeTomosuSora.jpg")
 imgAlbum.push("BackupData/IMG/AudioIMG/AsunoYozoraShoukaihan.jpg")
@@ -70,6 +70,21 @@ var pauseMusic = document.getElementById("pauseMusic")
 var autoMusic = document.getElementById("autoMusic")
 var thumbMusic = document.getElementById("thumbMusic")
 var thumbPopup = document.getElementById("thumbMusicPopup")
+
+function bubbleSort(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j].localeCompare(arr[j+1]) > 0) {
+                x = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = x
+            }
+        }
+    }
+}
+bubbleSort(nameAlbum)
+bubbleSort(musicList)
+bubbleSort(imgAlbum)
 
 //ThumbnalMusicBox
 function thumbnailMusic() {
@@ -239,6 +254,37 @@ closePopup.addEventListener("click", () => {
     popupMusic.style.display = "none"
 })
 
+//Mở list album nhạc đang phát:
+// const showAlbumBTN = document.getElementById("showAlbumBTN")
+// const mainPopup = document.getElementById("mainPopup")
+// const subPopup = document.getElementById("subPopup")
+// const iconShowAlbumBTN = showAlbumBTN.querySelector("i")
+// let isAlbumOn = false
+// showAlbumBTN.addEventListener('click', () => {
+//     if (!isAlbumOn) {
+//         isAlbumOn = true
+//         iconShowAlbumBTN.style.rotate = '180deg'
+//         subPopup.style.display = "block"
+//         setTimeout(() => {
+//             subPopup.style.opacity = 1
+//         }, 250)
+//         thumbPopup.style.width = "0%"
+//         thumbPopup.style.border = '0'
+        
+//     }   
+//     else {
+//         isAlbumOn = false
+//         subPopup.style.opacity = 0
+//         setTimeout(() => {
+//             subPopup.style.display = 'none'
+//         }, 250)
+//         iconShowAlbumBTN.style.rotate = '0deg'
+//         thumbPopup.style.width = "15rem"
+//         thumbPopup.style.border = "solid 2px"
+//     }
+// })
+
+
 
 //Chọn ngẫu nhiên nhạc làm album của ngày:
 // const musicDay = document.getElementById("musicDay")
@@ -247,6 +293,10 @@ let arrRan = new Array()
 async function musicOfDay() {
     var pickRanArr = new Array()
     for (var i = 0; i < 5; i++) {
+        var infoMusicOfDay = document.createElement('div')
+        infoMusicOfDay.style.display = 'flex'
+        infoMusicOfDay.style.marginBottom = "2%"
+
         var ran = Math.floor(Math.random() * musicList.length)
         while (arrRan.includes(ran)) {
             ran = Math.floor(Math.random() * musicList.length)
@@ -256,17 +306,22 @@ async function musicOfDay() {
         var musicDayDiv = document.createElement('div')
         musicDayDiv.className = "musicOfTheDay"
         musicDayDiv.textContent = `${i+1}. ${nameAlbum[arrRan[i]].substring(0, nameAlbum[arrRan[i]].indexOf(" - "))}`
-        albumMusic.appendChild(musicDayDiv)
 
+        var pictureDayImg = document.createElement('img')
+        pictureDayImg.style.height = "3rem"
+        pictureDayImg.style.width = "3rem"
+        pictureDayImg.style.marginRight = '3%'
+        pictureDayImg.src = imgAlbum[arrRan[i]]
+        pictureDayImg.style.border = "solid"
+        pictureDayImg.style.borderWidth = " 2px 2px 2px 0"
+        pictureDayImg.style.userSelect = "none"
 
+        infoMusicOfDay.appendChild(pictureDayImg)
+        infoMusicOfDay.appendChild(musicDayDiv)
+
+        albumMusic.appendChild(infoMusicOfDay)
+        addClickMusicAlbum(i)
     }
-    // for (var i = 0; i < 5; i++) {
-
-    addClickMusicAlbum(0)
-    addClickMusicAlbum(1)
-    addClickMusicAlbum(2)
-    addClickMusicAlbum(3)
-    addClickMusicAlbum(4)
 }
 function addClickMusicAlbum(i) {
     var musicOfTheDay = document.getElementsByClassName("musicOfTheDay")
@@ -289,6 +344,62 @@ function addClickMusicAlbum(i) {
     })
 }
 
+//Danh sách album
+const listMusicName = document.getElementById("listMusicFrame")
+
+async function showFullListAlbum() {
+    for (let i = 0; i < musicList.length; i++) {
+        var itemSong = document.createElement('div')
+        itemSong.className = "itemSong"
+        listMusicName.appendChild(itemSong)
+
+        var subIMG = document.createElement('div')
+        subIMG.className = "subIMG"
+        var imgSub = document.createElement('img')
+        subIMG.appendChild(imgSub)
+        imgSub.src = imgAlbum[i]
+        imgSub.style.width = "100%"
+
+        var infoSong = document.createElement('div')
+        infoSong.className = "info--song"
+
+        var nameSong = document.createElement('div')
+        nameSong.className = 'nameSong'
+        nameSong.textContent =  nameAlbum[i].substring(0, nameAlbum[i].indexOf(" - "))
+        var singer = document.createElement('div')
+        singer.className = 'singer'
+        singer.textContent = nameAlbum[i].substring(nameAlbum[i].indexOf(" - "), nameAlbum[i].length)
+        infoSong.appendChild(nameSong)
+        infoSong.appendChild(singer)
+
+        itemSong.appendChild(subIMG)
+        itemSong.appendChild(infoSong)
+        addFullClickMusicAlbum(i)
+    }
+}
+
+function addFullClickMusicAlbum(i) {
+    var itemSong = document.getElementsByClassName("itemSong")
+    itemSong[i].addEventListener('click', () => {
+        openMusicPopup()
+        ranIndex = i
+        ranMusic = musicList[ranIndex]
+        document.getElementById("musicPlay").src = ranMusic
+        document.getElementById("nameMusic").innerHTML = `Đang phát <b>${nameAlbum[ranIndex]}</b>`
+
+        musicPlay.play()
+        pauseMusic.className = "fa-solid fa-pause"
+        document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
+        thumbMusic.style.animation = "rorateDisk 5s linear infinite"
+        thumbPopup.style.animation = "rorateDisk 5s linear infinite"
+
+        thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    })
+}
+
+showFullListAlbum()
 musicOfDay()
 thumbnailMusic()
 randomMusic()
