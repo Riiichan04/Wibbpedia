@@ -2,7 +2,7 @@
 var musicList = new Array()
 musicList.push("BackupData/Audio/Kirari.mp3")
 musicList.push("BackupData/Audio/NIGHTDANCER_DAZBEEcover.mp3")
-musicList.push("BackupData/Audio/AdoOverdose.mp3")
+musicList.push("BackupData/Audio/OverdoseAdo.mp3")
 musicList.push("BackupData/Audio/FishInThePool_DAZBEE(Cover).mp3")
 musicList.push("BackupData/Audio/KanadeTomosuSora_Kanade.mp3")
 musicList.push("BackupData/Audio/AsunoYozoraShoukaihan_HoshinoIchika.mp3")
@@ -54,6 +54,10 @@ imgAlbum.push("BackupData/IMG/AudioIMG/Kakusei.jpg")
 imgAlbum.push("BackupData/IMG/AudioIMG/Kataomoi.jpg")
 imgAlbum.push("BackupData/IMG/AudioIMG/OnajiHanashi.jpg")
 
+bubbleSort(nameAlbum)
+bubbleSort(musicList)
+bubbleSort(imgAlbum)
+
 var ranIndex = Math.floor(Math.random() * musicList.length)
 var ranMusic = musicList[ranIndex]
 
@@ -82,9 +86,6 @@ function bubbleSort(arr) {
         }
     }
 }
-bubbleSort(nameAlbum)
-bubbleSort(musicList)
-bubbleSort(imgAlbum)
 
 //ThumbnalMusicBox
 function thumbnailMusic() {
