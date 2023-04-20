@@ -40,11 +40,8 @@
         <!-- Hộp Nhạc -->
         <div class="musicIcon" , style="margin-left: 0;" , id="thumbMusic" , onclick="openMusicPopup()"></div>
         <div id="popupMusic" , style="display: none; color: white; border-radius: 15px;">
-            <div style="backdrop-filter: blur(15px);">
-                <button class="fa-solid fa-xmark" , id="closePopup" , style="background-color: rgba(0,0,0,0); 
-                    border: none;
-                    font-size: 30px;
-                    color: white; "></button>
+            <div id="mainPopup" style="backdrop-filter: blur(15px); border-radius: 15px 15px 0 0;">
+                <button class="fa-solid fa-xmark" , id="closePopup"></button>
                 <div class="musicIconPopup" , id="thumbMusicPopup"></div>
                 <p id="nameMusic"></p>
                 <div class="progressvolume">
@@ -67,6 +64,14 @@
                 <button id="randomMusic" , style="margin-bottom: 10px;"><i class="fa-solid fa-shuffle"></i> Phát Ngẫu
                     Nhiên</button>
             </div>
+
+            <div id="subPopup" style="display: none; opacity: 1; backdrop-filter: blur(15px); height: 0;">
+                <div id="listMusicFrame", style="height: 300px;"></div>
+            </div>
+
+            <div id="showAlbumBTN" style="backdrop-filter: blur(15px); border-radius:0 0 15px 15px;"><i
+                    class="fa-solid fa-caret-down"></i>
+            </div>
         </div>
     </div>
     <!-- Khu Vực Chính -->
@@ -78,6 +83,15 @@
                 <div id="gachabutton" onclick="gacha()"> Click vào Để Gacha</div>
                 <div id="gacharesult"></div>
                 <div id="protectgacha"></div>
+            </div>
+
+            <div id="leftMusicFrame">
+                <h4
+                    style="padding-top: 15px ;font-size: 25px; background-image: linear-gradient(to bottom right, rgb(0, 179, 255), rgb(0, 255, 195)); margin-top: 0; margin-bottom: 5px; border-radius: 5px; color: rgb(244, 244, 244); margin-bottom: 0;">
+                    Danh sách Album</h4>
+                <div id="musicFrameList">
+
+                </div>
             </div>
         </div>
         <div class="mainframe">
@@ -111,6 +125,32 @@
                         <a href="" class="infonews">[Blue Archive] <i>Tất tần tật về Misono Mika</i></a>
                         <a href="" class="infonews">[Genshin] <i>Thông tin và đánh giá chung Dehya</i></a>
                         <a href="" class="infonews">[Genshin] <i>Thương Hộ Ma - Nguồn gốc và sức mạnh</i></a>
+                    </div>
+                </div>
+
+                <div class="musicFrame">
+                    <h4
+                        style="padding-top: 15px ;font-size: 25px; background-image: linear-gradient(to bottom right, rgb(0, 179, 255), rgb(0, 255, 195)); margin-top: 0; margin-bottom: 5px; border-radius: 5px; color: rgb(244, 244, 244); margin-bottom: 0;">
+                        Góc Âm Nhạc</h4>
+                    <div style="display: flex;">
+                        <div id="albumMusic" , style="width: 49%;">
+                            <h5 class="musicTitleNews"><u>Album của Ngày</u></h5>
+    
+                        </div>
+                        <div id="musicNews" class="newsBox"
+                            style="width: 50%; border: solid 2px; border-radius: 7px; border-left: 0;">
+                            <h5 class="musicTitleNews"><u>Tin tức Âm nhạc</u></h5>
+                            <a href="" class="infonews"> - Sự đổi mới trong phong cách của YOASOBI</a>
+                            <a href="" class="infonews"> - Idol - Một cú hit mới của Ayase/YOASOBI</a>
+                            <a href="" class="infonews"> - Fujii Kaze trở lại cùng một diện mạo già dặn hơn</a>
+                            <a href="" class="infonews"> - Nightcord at 25h chuẩn bị ra mắt Album thứ 4</a>
+                            <a href="" class="infonews"> - Utaite - Làn gió mới trong JPop</a>
+                            <a href="" class="infonews"> - Sự kế thừa của các Vocaloid</a>
+                            <a href="" class="infonews"> - Khi con người muốn hát những bài hát vốn không dành cho con
+                                người</a>
+    
+                        </div>
+    
                     </div>
                 </div>
 
