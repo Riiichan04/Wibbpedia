@@ -188,6 +188,14 @@
     background-color: rgba(155, 155, 155, 0.196);
 }
 
+#musicFrameList {
+    height: 20rem;
+    overflow-y: scroll;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }

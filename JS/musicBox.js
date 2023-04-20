@@ -64,6 +64,8 @@ var ranMusic = musicList[ranIndex]
 function randomMusic() {
     document.getElementById("musicPlay").src = ranMusic
     document.getElementById("nameMusic").innerHTML = `Đang phát <b>${nameAlbum[ranIndex]}</b>`
+    changeStateMusic(ranIndex)
+    changeFrameStateMusic(ranIndex)
 }
 
 var musicPlay = document.getElementById("musicPlay")
@@ -74,14 +76,16 @@ var pauseMusic = document.getElementById("pauseMusic")
 var autoMusic = document.getElementById("autoMusic")
 var thumbMusic = document.getElementById("thumbMusic")
 var thumbPopup = document.getElementById("thumbMusicPopup")
+var infoSong = document.getElementsByClassName("info--song")
+var frame_infoSong = document.getElementsByClassName("frame_info--song")
 
 function bubbleSort(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length - 1 - i; j++) {
-            if (arr[j].localeCompare(arr[j+1]) > 0) {
+            if (arr[j].localeCompare(arr[j + 1]) > 0) {
                 x = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = x
+                arr[j] = arr[j + 1]
+                arr[j + 1] = x
             }
         }
     }
@@ -109,6 +113,8 @@ musicRandom.addEventListener("click", () => {
 
     thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    changeStateMusic(ranIndex)
+    changeFrameStateMusic(ranIndex)
 })
 
 nextMusic.addEventListener("click", () => {
@@ -128,6 +134,8 @@ nextMusic.addEventListener("click", () => {
     thumbMusic.style.animation = "none"
     thumbPopup.style.animation = "none"
     popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    changeStateMusic(ranIndex)
+    changeFrameStateMusic(ranIndex)
 })
 
 prevMusic.addEventListener("click", () => {
@@ -147,6 +155,9 @@ prevMusic.addEventListener("click", () => {
     thumbMusic.style.animation = "none"
     thumbPopup.style.animation = "none"
     popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    changeStateMusic(ranIndex)
+    changeFrameStateMusic(ranIndex)
+
 })
 
 pauseMusic.addEventListener("click", () => {
@@ -156,6 +167,8 @@ pauseMusic.addEventListener("click", () => {
         document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
         thumbMusic.style.animation = "rorateDisk 5s linear infinite"
         thumbPopup.style.animation = "rorateDisk 5s linear infinite"
+        infoSong[ranIndex].style.animation = "bounce 2s infinite"
+        frame_infoSong[ranIndex].style.animation = "bounce 2s infinite"
     }
     else {
         musicPlay.pause()
@@ -163,6 +176,8 @@ pauseMusic.addEventListener("click", () => {
         document.getElementById("nameMusic").innerHTML = `Đang tạm ngừng: <b>${nameAlbum[ranIndex]}</b>`
         thumbMusic.style.animationPlayState = "paused"
         thumbPopup.style.animationPlayState = "paused"
+        infoSong[ranIndex].style.animationPlayState = "paused"
+        
     }
 })
 
@@ -191,6 +206,8 @@ musicPlay.addEventListener('ended', () => {
     document.getElementById("nameMusic").innerHTML = `Đã phát xong: <b>${nameAlbum[ranIndex]}</b>`
     thumbMusic.style.animation = "none"
     thumbPopup.style.animation = "none"
+    infoSong[ranIndex].style.color = "yellow"
+    infoSong[ranIndex].style.animation = "none"
 })
 
 musicPlay.addEventListener("load", () => {
@@ -256,34 +273,35 @@ closePopup.addEventListener("click", () => {
 })
 
 //Mở list album nhạc đang phát:
-// const showAlbumBTN = document.getElementById("showAlbumBTN")
-// const mainPopup = document.getElementById("mainPopup")
-// const subPopup = document.getElementById("subPopup")
-// const iconShowAlbumBTN = showAlbumBTN.querySelector("i")
-// let isAlbumOn = false
-// showAlbumBTN.addEventListener('click', () => {
-//     if (!isAlbumOn) {
-//         isAlbumOn = true
-//         iconShowAlbumBTN.style.rotate = '180deg'
-//         subPopup.style.display = "block"
-//         setTimeout(() => {
-//             subPopup.style.opacity = 1
-//         }, 250)
-//         thumbPopup.style.width = "0%"
-//         thumbPopup.style.border = '0'
-        
-//     }   
-//     else {
-//         isAlbumOn = false
-//         subPopup.style.opacity = 0
-//         setTimeout(() => {
-//             subPopup.style.display = 'none'
-//         }, 250)
-//         iconShowAlbumBTN.style.rotate = '0deg'
-//         thumbPopup.style.width = "15rem"
-//         thumbPopup.style.border = "solid 2px"
-//     }
-// })
+const showAlbumBTN = document.getElementById("showAlbumBTN")
+const mainPopup = document.getElementById("mainPopup")
+const subPopup = document.getElementById("subPopup")
+const iconShowAlbumBTN = showAlbumBTN.querySelector("i")
+let isAlbumOn = false
+showAlbumBTN.addEventListener('click', () => {
+    if (!isAlbumOn) {
+        isAlbumOn = true
+        iconShowAlbumBTN.style.rotate = '180deg'
+        subPopup.style.display = "block"
+        setTimeout(() => {
+            subPopup.style.opacity = 1
+        }, 250)
+        thumbPopup.style.width = "5rem"
+        thumbPopup.style.height = "5rem"
+        thumbPopup.style.marginLeft = "0"
+    }
+    else {
+        isAlbumOn = false
+        subPopup.style.opacity = 0
+        setTimeout(() => {
+            subPopup.style.display = 'none'
+        }, 250)
+        iconShowAlbumBTN.style.rotate = '0deg'
+        thumbPopup.style.width = "15rem"
+        thumbPopup.style.height = "15rem"
+        thumbPopup.style.marginLeft = "auto"
+    }
+})
 
 
 
@@ -306,7 +324,7 @@ async function musicOfDay() {
         pickRanArr[i] = musicList[arrRan[i]]
         var musicDayDiv = document.createElement('div')
         musicDayDiv.className = "musicOfTheDay"
-        musicDayDiv.textContent = `${i+1}. ${nameAlbum[arrRan[i]].substring(0, nameAlbum[arrRan[i]].indexOf(" - "))}`
+        musicDayDiv.textContent = `${i + 1}. ${nameAlbum[arrRan[i]].substring(0, nameAlbum[arrRan[i]].indexOf(" - "))}`
 
         var pictureDayImg = document.createElement('img')
         pictureDayImg.style.height = "3rem"
@@ -347,7 +365,8 @@ function addClickMusicAlbum(i) {
 
 //Danh sách album
 const listMusicName = document.getElementById("listMusicFrame")
-
+const musicOperator = document.getElementsByClassName("musicOperator")
+const musicFrameAlbum = document.getElementById("musicFrameList")
 async function showFullListAlbum() {
     for (let i = 0; i < musicList.length; i++) {
         var itemSong = document.createElement('div')
@@ -366,7 +385,7 @@ async function showFullListAlbum() {
 
         var nameSong = document.createElement('div')
         nameSong.className = 'nameSong'
-        nameSong.textContent =  nameAlbum[i].substring(0, nameAlbum[i].indexOf(" - "))
+        nameSong.textContent = nameAlbum[i].substring(0, nameAlbum[i].indexOf(" - "))
         var singer = document.createElement('div')
         singer.className = 'singer'
         singer.textContent = nameAlbum[i].substring(nameAlbum[i].indexOf(" - "), nameAlbum[i].length)
@@ -376,8 +395,42 @@ async function showFullListAlbum() {
         itemSong.appendChild(subIMG)
         itemSong.appendChild(infoSong)
         addFullClickMusicAlbum(i)
+        musicPlaying(i)
     }
 }
+
+async function frame_showFullListAlbum() {
+    for (let i = 0; i < musicList.length; i++) {
+        var frame_itemSong = document.createElement('div')
+        frame_itemSong.className = "frame_itemSong"
+        musicFrameAlbum.appendChild(frame_itemSong)
+
+        var frame_subIMG = document.createElement('div')
+        frame_subIMG.className = "frame_subIMG"
+        var frame_imgSub = document.createElement('img')
+        frame_subIMG.appendChild(frame_imgSub)
+        frame_imgSub.src = imgAlbum[i]
+        frame_imgSub.style.width = "100%"
+
+        var frame_infoSong = document.createElement('div')
+        frame_infoSong.className = "frame_info--song"
+
+        var frame_nameSong = document.createElement('div')
+        frame_nameSong.className = 'frame_nameSong'
+        frame_nameSong.textContent = nameAlbum[i].substring(0, nameAlbum[i].indexOf(" - "))
+        var frame_singer = document.createElement('div')
+        frame_singer.className = 'frame_singer'
+        frame_singer.textContent = nameAlbum[i].substring(nameAlbum[i].indexOf(" - "), nameAlbum[i].length)
+        frame_infoSong.appendChild(frame_nameSong)
+        frame_infoSong.appendChild(frame_singer)
+
+        frame_itemSong.appendChild(frame_subIMG)
+        frame_itemSong.appendChild(frame_infoSong)
+        addframeFullClickMusicAlbum(i)
+        framemusicPlaying(i)
+    }
+}
+
 
 function addFullClickMusicAlbum(i) {
     var itemSong = document.getElementsByClassName("itemSong")
@@ -400,7 +453,102 @@ function addFullClickMusicAlbum(i) {
     })
 }
 
+function musicPlaying(i) {
+    var itemSong = document.getElementsByClassName("itemSong")
+    var infoSong = document.getElementsByClassName("info--song")
+    itemSong[i].addEventListener('click', () => {
+        for (var j = 0; j < musicList.length; j++) {
+            if (i == j) {
+                infoSong[i].style.color = "yellow"
+                infoSong[i].style.animation = "bounce 2s infinite"
+            }
+            else {
+                infoSong[j].style.textShadow = "none"
+                infoSong[j].style.color = "white"
+                infoSong[j].style.animation = "none"
+            }
+        }
+    })
+}
+
+function changeStateMusic(i) {
+    var infoSong = document.getElementsByClassName("info--song")
+    if(musicPlay.paused) {
+        infoSong[i].style.animation = "none"
+    }
+    for (var j = 0; j < musicList.length; j++) {
+        if (i == j) {
+            infoSong[i].style.color = "yellow"
+        }
+        else {
+            infoSong[j].style.textShadow = "none"
+            infoSong[j].style.color = "white"
+            infoSong[j].style.animation = "none"
+        }
+    }
+}
+
+function framemusicPlaying(i) {
+    var frame_itemSong = document.getElementsByClassName("frame_itemSong")
+    var frame_infoSong = document.getElementsByClassName("frame_info--song")
+    frame_itemSong[i].addEventListener('click', () => {
+        for (var j = 0; j < musicList.length; j++) {
+            if (i == j) {
+                frame_infoSong[i].style.color = "yellow"
+                frame_infoSong[i].style.animation = "bounce 2s infinite"
+            }
+            else {
+                frame_infoSong[j].style.textShadow = "none"
+                frame_infoSong[j].style.color = "black"
+                frame_infoSong[j].style.animation = "none"
+            }
+        }
+    })
+}
+
+function addframeFullClickMusicAlbum(i) {
+    var frame_itemSong = document.getElementsByClassName("frame_itemSong")
+    frame_itemSong[i].addEventListener('click', () => {
+        openMusicPopup()
+        ranIndex = i
+        ranMusic = musicList[ranIndex]
+        document.getElementById("musicPlay").src = ranMusic
+        document.getElementById("nameMusic").innerHTML = `Đang phát <b>${nameAlbum[ranIndex]}</b>`
+
+        musicPlay.play()
+        pauseMusic.className = "fa-solid fa-pause"
+        document.getElementById("nameMusic").innerHTML = `Đang phát: <b>${nameAlbum[ranIndex]}</b>`
+        thumbMusic.style.animation = "rorateDisk 5s linear infinite"
+        thumbPopup.style.animation = "rorateDisk 5s linear infinite"
+
+        thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+        changeStateMusic(i)
+
+        infoSong[ranIndex].style.animation = "bounce 2s infinite"
+    })
+}
+
+function changeFrameStateMusic(i) {
+    var frame_infoSong = document.getElementsByClassName("frame_info--song")
+    if(musicPlay.paused) {
+        frame_infoSong[i].style.animation = "none"
+    }
+    for (var j = 0; j < musicList.length; j++) {
+        if (i == j) {
+            frame_infoSong[i].style.color = "yellow"
+        }
+        else {
+            frame_infoSong[j].style.textShadow = "none"
+            frame_infoSong[j].style.color = "black"
+            frame_infoSong[j].style.animation = "none"
+        }
+    }
+}
+
 showFullListAlbum()
+frame_showFullListAlbum()
 musicOfDay()
 thumbnailMusic()
 randomMusic()

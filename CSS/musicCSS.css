@@ -130,9 +130,10 @@
 #volUp:active, #volDown:active, #prevMusic:active, #pauseMusic:active, #nextMusic:active, #randomMusic:active {
     background-color: rgb(200, 200, 200);
 }
-/* #showAlbumBTN {
+#showAlbumBTN {
     font-size: 30px;
     text-align: center;
+    transition: linear 0.1s;
 }
 #showAlbumBTN:hover {
     background-color: rgba(128, 128, 128, 0.2);
@@ -140,7 +141,7 @@
 #showAlbumBTN:active {
     background-color: rgba(128, 128, 128, 0.4);
 }
-*/
+
 .itemSong {
     border: solid;
     border-width: 0 0 2px 0;
@@ -151,6 +152,18 @@
     width: 100%;
     height: fit-content;
     gap: 5px;
+}
+
+#subPopup {
+    transition: ease-out 0.2s;
+}
+
+/* .itemSong {
+    transition: linear 0.25s;
+} */
+
+.info--song {
+    animation: none;
 }
 
 .subIMG {
@@ -172,5 +185,57 @@
     color: rgb(114, 114, 114);
 }
 .info--song:active {
+    color: rgb(173, 173, 173);
+}
+
+@keyframes bounce {
+    0% { margin-top:0px}
+    10% { margin-top:5px}
+    20% { margin-top: 10px}
+    30% { margin-top: 15px}
+    40% { margin-top: 10px}
+    50% { margin-top: 5px}
+    60% { margin-top: 0px}
+    70% { margin-top: -5px}
+    80% { margin-top: -10px}
+    90% { margin-top: -5px}
+    100% {margin-top: 0}
+}
+
+/* Frame List Song */
+.frame_itemSong {
+    border: solid;
+    border-width: 0 0 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    height: fit-content;
+    gap: 5px;
+}
+.frame_info--song {
+    animation: none;
+}
+
+.frame_subIMG {
+    margin: 5px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    /* flex-shrink: 0; */
+    overflow: hidden;
+}
+.frame_nameSong {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+.frame_singer {
+    font-size: 0.8rem;
+} 
+.frame_info--song:hover {
+    color: rgb(114, 114, 114);
+}
+.frame_info--song:active {
     color: rgb(173, 173, 173);
 }
