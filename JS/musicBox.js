@@ -461,11 +461,16 @@ function musicPlaying(i) {
             if (i == j) {
                 infoSong[i].style.color = "yellow"
                 infoSong[i].style.animation = "bounce 2s infinite"
+                frame_infoSong[i].style.color = "yellow"
+                frame_infoSong[i].style.animation = "bounce 2s infinite"
             }
             else {
                 infoSong[j].style.textShadow = "none"
                 infoSong[j].style.color = "white"
                 infoSong[j].style.animation = "none"
+                frame_infoSong[i].style.color = "none"
+                frame_infoSong[i].style.animation = "white"
+                frame_infoSong[j].style.animation = "none"
             }
         }
     })
