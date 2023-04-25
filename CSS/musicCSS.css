@@ -193,17 +193,7 @@
 }
 
 @keyframes bounce {
-    0% { margin-top:0px}
-    10% { margin-top:5px}
-    20% { margin-top: 10px}
-    30% { margin-top: 15px}
-    40% { margin-top: 10px}
-    50% { margin-top: 5px}
-    60% { margin-top: 0px}
-    70% { margin-top: -5px}
-    80% { margin-top: -10px}
-    90% { margin-top: -5px}
-    100% {margin-top: 0}
+ 
 }
 
 /* Frame List Song */
