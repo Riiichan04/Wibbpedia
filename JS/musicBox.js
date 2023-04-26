@@ -113,6 +113,7 @@ musicRandom.addEventListener("click", () => {
 
     thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
+    popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     changeStateMusic(ranIndex)
     changeFrameStateMusic(ranIndex)
 })

@@ -1,0 +1,227 @@
+/* Music Box Mini */
+.mainMusicFrame {
+    border-radius: 10px;
+    width: 75vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 200px;
+    margin-left: 10vw;
+    
+}
+
+.musicMini {
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: rgb(96, 96, 96);
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+
+.musicType {
+    font-size: 20px;
+    display: flex;
+}
+
+.musicOperator {
+    display: flex;
+    transition: ease 0.2s;
+}
+
+#musicPlay {
+    width: 100%;
+}
+
+#nameMusic {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    transition: ease 0.2s;
+}
+
+/* Các nút nhạc */
+#prevMusic, #nextMusic, #pauseMusic {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    margin-left: 10%;
+    font-size: 25px;
+    display: inline-block;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+#randomMusic {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+    margin-left: 10%;
+    width: 80%;
+    font-size: 22px;
+    text-align: center;
+
+}
+/* Thanh progress */
+#progressMusic {
+    font-size: 18px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    transition: ease 0.2s;
+}
+
+#timingProgress {
+    width: 100%;
+    height: 2vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-bottom: 1%;
+    transition: ease 0.2s;
+}
+
+#reallyProgress {
+    width: 0%;
+    height: 2vh;
+    background-color: rgba(0, 255, 200);
+    border-radius: 20px;
+}
+
+#expectProgress {
+    width: 0%;
+    height: 2vh;
+    background-color: rgba(128, 128, 128, 0.75);
+    border-radius: 20px;
+}
+
+/* Chỉnh âm lượng */
+#volValue {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+
+#volUp, #volDown {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    font-size: 25px;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: inline-block;
+    border: solid;
+    border-color: rgb(74, 74, 74);
+}
+
+#volUp, #volDown, #prevMusic, #pauseMusic, #nextMusic, #randomMusic, #volValue {
+    border-radius: 15px;
+}
+
+#volUp:hover, #volDown:hover, #prevMusic:hover, #pauseMusic:hover, #nextMusic:hover, #randomMusic:hover {
+    background-color: rgb(150, 150, 150);
+}
+
+#volUp:active, #volDown:active, #prevMusic:active, #pauseMusic:active, #nextMusic:active, #randomMusic:active {
+    background-color: rgb(200, 200, 200);
+}
+#showAlbumBTN {
+    font-size: 30px;
+    text-align: center;
+    transition: linear 0.1s;
+}
+#showAlbumBTN:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+#showAlbumBTN:active {
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.itemSong {
+    border: solid;
+    border-width: 0 0 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    height: fit-content;
+    gap: 5px;
+}
+
+.info--song {
+    animation: none;
+}
+
+.subIMG {
+    margin: 5px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    /* flex-shrink: 0; */
+    overflow: hidden;
+}
+.nameSong {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+.singer {
+    font-size: 0.8rem;
+} 
+.info--song:hover {
+    color: rgb(114, 114, 114);
+}
+.info--song:active {
+    color: rgb(173, 173, 173);
+}
+
+@keyframes bounce {
+ 
+}
+
+/* Frame List Song */
+.frame_itemSong {
+    border: solid;
+    border-width: 0 0 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    height: fit-content;
+    gap: 5px;
+}
+.frame_info--song {
+    animation: none;
+}
+
+.frame_subIMG {
+    margin: 5px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    /* flex-shrink: 0; */
+    overflow: hidden;
+}
+.frame_nameSong {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+.frame_singer {
+    font-size: 0.8rem;
+} 
+.frame_info--song:hover {
+    color: rgb(114, 114, 114);
+}
+.frame_info--song:active {
+    color: rgb(173, 173, 173);
+}

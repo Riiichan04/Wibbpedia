@@ -52,7 +52,10 @@ confirmBtn[0].onclick = async() => {
                             "username": myJSON[i]["username"],
                             "avatar": myJSON[i]["avatar"],
                             "level": myJSON[i]["level"],
-                            "exp": myJSON[i]["exp"]
+                            "exp": myJSON[i]["exp"],
+                            "sRPGatk": myJSON[i]["sRPGatk"],
+                            "sRPGdef": myJSON[i]["sRPGdef"],
+                            "sRPGhp": myJSON[i]["sRPGhp"],
                         }
                         localJSON = JSON.stringify(localJSON)
                         localStorage.setItem("info", localJSON)
@@ -136,7 +139,10 @@ confirmBtn[1].onclick = async() => {
                 "nickname": nickR.value.trim(),
                 "avatar": "https://media.tenor.com/oudJ-ckzZLMAAAAC/bocchi-the-rock-kita-ikuyo.gif",
                 "level": 1,
-                "exp": 0
+                "exp": 0,
+                "sRPGatk": 5,
+                "sRPGdef": 2,
+                "sRPGhp": 30
             }
             getAPILogin(2, postJSON)
             waitCreate = true

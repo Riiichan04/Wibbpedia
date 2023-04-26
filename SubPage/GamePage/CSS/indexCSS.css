@@ -1,0 +1,302 @@
+.body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainbg {
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    background-image: url("https://cutewallpaper.org/22/anime-setting-wallpapers/1083114127.jpg"), url("https://cdn.discordapp.com/attachments/1069352694554312704/1069352701881761803/775137.gif");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+}
+
+/* Thanh Header */
+.header {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headlist {
+    padding-left: 0;
+    margin: auto 20px;
+}
+
+.headlistitem {
+    font-size: 20px;
+    list-style: none;
+    margin: 0 5px;
+    display: inline;
+    color: orangered;
+}
+
+.headlistitem_item {
+    text-decoration: none;
+    color: rgb(157, 0, 255);
+}
+
+.headlistitem_item:hover {
+    color: rgb(131, 0, 213);
+}
+
+.headlistitem_item:active {
+    color: rgb(98, 0, 158);
+}
+
+.musicIcon {
+    background-color: rgb(0, 145, 255);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 25px;
+    position: absolute;
+    float: right;
+    right: 10px;
+}
+
+.musicIcon:hover {
+    cursor: pointer;
+}
+
+.musicIconPopup {
+    background-color: rgb(0, 145, 255);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: solid 2px;
+    border-color: gray;
+    right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: linear 0.15s
+}
+
+#closePopup,
+#closeUserPopup {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 30px;
+    color: white
+}
+
+#closeUserPopup {
+    font-size: 20px;
+}
+
+#closePopup:hover,
+#closeUserPopup:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+#closePopup:active,
+#closeUserPopup:active {
+    color: rgb(78, 78, 78);
+}
+
+#popupMusic {
+    margin-right: 1.2%;
+    width: 25%;
+    background-color: rgb(47, 47, 47);
+    position: absolute;
+    right: 0;
+}
+
+@keyframes rorateDisk {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* Phần Chính Của Web */
+.frame {
+    display: flex;
+}
+
+.mainframe {
+    border-radius: 10px;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 200px;
+    /* margin-left: 10vw; */
+}
+
+
+.webtitle {
+    font-size: 40px;
+}
+
+.title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-left: 30px;
+    color: rgb(0, 242, 255);
+    border-color: rgb(246, 0, 156);
+    background-image: url("https://cdn.discordapp.com/attachments/1069352694554312704/1089949680974172290/TitleWeb.png");
+}
+
+/* Thành phần trên mainframe */
+/* Hiển Thị Hình Ảnh + Bài Viết */
+.leftframe {
+    margin-top: 200px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    /* width: 28vi; */
+    width: 30%;
+    /* height: 100rem; */
+    border-color: aquamarine;
+    background-color: rgba(255, 252, 252, 0.75);
+    float: left;
+}
+
+.gachaframe {
+    /* height: 30%; */
+    font-size: 17px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: double;
+}
+
+#leftMusicFrame {
+    border-width: 5px;
+    border-style: double;
+    border-color: aquamarine;
+}
+
+#listMusicFrame {
+    height: 20rem;
+    overflow-y: scroll;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+#musicFrameList {
+    height: 20rem;
+    overflow-y: scroll;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgba(155, 155, 155, 0.196);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #c5c5c5;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #626262;
+    border-radius: 20px;
+}
+
+
+/* Hiển Thị 4koma */
+.rightframe {
+    float: right;
+    height: 25%;
+    width: 25%;
+}
+
+/* Popup User */
+#userPopup {
+    cursor: pointer;
+    user-select: none;
+}
+
+.usertext:hover {
+    color: rgb(191, 0, 255);
+}
+
+.usertext:active {
+    color: #ff00ff;
+}
+
+#userinfo {
+    margin-top: 70px;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    width: 15rem;
+    /* height: 5rem; */
+    padding-bottom: 1%;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray;
+    right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logout,
+#changeavt {
+    cursor: pointer;
+}
+
+#logout:hover,
+#changeavt:hover {
+    color: rgb(218, 218, 218);
+}
+
+#logout:active,
+#changeavt:active {
+    color: rgb(150, 150, 150);
+}
+
+#userAVT {
+    width: 27%;
+    height: 27%;
+    border-radius: 15px;
+}
+
+#infouser {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#userinfo {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.musicTitleNews {
+    height: 30px;
+    background-color: gray;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(240, 240, 240);
+    padding-top: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#albumMusic {
+    display: grid;
+    border: solid 2px;
+    border-radius: 7px;
+}
