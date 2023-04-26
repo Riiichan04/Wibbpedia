@@ -288,7 +288,8 @@ showAlbumBTN.addEventListener('click', () => {
         }, 250)
         thumbPopup.style.width = "5rem"
         thumbPopup.style.height = "5rem"
-        thumbPopup.style.marginLeft = "0"
+        thumbPopup.style.marginLeft = "auto"
+        listMusicName.style.height = "250px"
     }
     else {
         isAlbumOn = false
@@ -300,6 +301,7 @@ showAlbumBTN.addEventListener('click', () => {
         thumbPopup.style.width = "15rem"
         thumbPopup.style.height = "15rem"
         thumbPopup.style.marginLeft = "auto"
+        listMusicName.style.height = "0px"
     }
 })
 
