@@ -300,3 +300,28 @@
     border: solid 2px;
     border-radius: 7px;
 }
+
+.titlenews {
+    background-image: linear-gradient(to bottom right, rgb(212, 0, 255), rgb(0, 150, 204), rgb(3, 255, 205));
+    border-radius: 5px;
+    font-size: 23px;
+    color: rgb(240, 240, 240);
+    padding-top: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#playrpgbutton {
+    padding-top: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+#rpgFrame {
+    height: 350px;
+}
