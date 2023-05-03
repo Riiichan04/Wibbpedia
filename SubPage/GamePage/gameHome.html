@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/indexCSS.css">
     <link rel="stylesheet" href="CSS/musicCSS.css">
+    <link rel="stylesheet" href="CSS/smallRPGCSS.css">
     <link rel="icon" href="https://i.pinimg.com/736x/4f/e9/4d/4fe94da2913bdc63a1f5c404f5fe0682.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
@@ -98,17 +99,19 @@
         <div class="leftframe">
             <h3 class="titlenews"><u>Super Mini RPG</u></h3>
             <div id="rpgFrame">
-                <div id="infoMonster"></div>
+                <div id="infoMonster" style="margin-bottom: 3%;"></div>
                 <div id="HP_Monster">
-                    <img src="" alt="">
-                    <div id="full_HP"></div>
-                    <div id="current_HP"></div>
+                    <div id="currentMon_HP"></div>
                 </div>
-                <div id="HP_Player">
-                    <div id="full_HP"></div>
-                    <div id="current_HP"></div>
+                <div id="infoLastATK" style="margin-top: 5%;"> </div>
+                <div id="HP_Player", style="margin-top:5%;">
+                    <div id="currentPlayer_HP"></div>
                 </div>
-                <div id="infoPlayer"></div>
+                <div id="infoPlayer" style="margin-top: 2%;"></div>
+                <div id="btnDiv" style="display: flex; justify-content: space-around; margin-top: 3%;">
+                    <div class="sRPG_btn" id="btn_ATK">Tấn Công</div>
+                    <div class="sRPG_btn" id="btn_Heal">Hồi Phục</div>
+                </div>
             </div>
         </div>
         <!-- <div class="mainframe">
@@ -121,6 +124,7 @@
     <script src="JS/userBox.js"></script>
     <script src="JS/musicBox.js"></script>
     <script src="JS/loginCheck.js"></script>
+    <script src="JS/smallRPG.js"></script>
 </body>
 
 </html>

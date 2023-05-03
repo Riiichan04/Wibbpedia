@@ -166,7 +166,6 @@ pauseMusic.addEventListener("click", () => {
         thumbMusic.style.animation = "rorateDisk 5s linear infinite"
         thumbPopup.style.animation = "rorateDisk 5s linear infinite"
         infoSong[ranIndex].style.animation = "bounce 2s infinite"
-        frame_infoSong[ranIndex].style.animation = "bounce 2s infinite"
     }
     else {
         musicPlay.pause()

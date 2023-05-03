@@ -1,0 +1,57 @@
+#HP_Monster, #HP_Player {
+    width: 100%;
+    height: 20px;
+    background-color: gray;
+    border-radius: 10px;
+}
+#currentMon_HP, #currentPlayer_HP {
+    border: solid black;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(0, 250, 46);
+    border-radius: 10px;
+}
+#currentPlayer_HP {
+    background-color: red;
+}
+
+#btn_ATK, #btn_Heal, #replayBTN {
+    font-size: 18px;
+    padding: 0 10px;
+    border-radius: 15px;
+    height: 30px;
+    border: solid gray;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+}
+#btn_ATK {
+    background-color: rgb(212, 0, 255);
+}
+#btn_Heal {
+    background-color: rgb(0, 221, 55);
+}
+
+#btn_ATK:hover {
+    background-color: rgb(223, 62, 255);
+}
+#btn_Heal:hover {
+    background-color: rgb(49, 232, 92);
+}
+#btn_ATK:active {
+    background-color: rgb(255, 120, 244);
+}
+#btn_Heal:active {
+    background-color: rgb(94, 230, 126);
+}
+
+#replayBTN {
+    background-color: orange;
+}
+#replayBTN:hover {
+    background-color: rgb(255, 180, 42);
+}
+#replayBTN:active {
+    background-color: rgb(255, 199, 96);
+}

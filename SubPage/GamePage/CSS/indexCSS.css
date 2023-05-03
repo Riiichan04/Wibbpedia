@@ -323,5 +323,5 @@
 }
 
 #rpgFrame {
-    height: 350px;
+    height: fit-content;
 }
