@@ -110,6 +110,7 @@ musicRandom.addEventListener("click", () => {
     document.getElementById("musicPlay").src = ranMusic
     document.getElementById("nameMusic").innerHTML = `Chuẩn bị phát: <b>${nameAlbum[ranIndex]}</b>`
 
+    pauseMusic.className = "fa-solid fa-play"
     thumbMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     thumbPopup.style.backgroundImage = `url(${imgAlbum[ranIndex]})`
     popupMusic.style.backgroundImage = `url(${imgAlbum[ranIndex]})`

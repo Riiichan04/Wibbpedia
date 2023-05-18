@@ -128,7 +128,7 @@
     border-radius: 10px;
     width: 50vw;
     background-color: rgba(255, 255, 255, 0.85);
-    margin-top: 200px;
+    margin-top: 125px;
     /* margin-left: 10vw; */
 }
 
@@ -152,7 +152,7 @@
 /* Thành phần trên mainframe */
 /* Hiển Thị Hình Ảnh + Bài Viết */
 .leftframe {
-    margin-top: 200px;
+    margin-top: 125px;
     border-radius: 10px;
     border-width: 5px;
     border-style: double;

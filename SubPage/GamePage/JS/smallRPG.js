@@ -2,8 +2,8 @@ let level = JSON.parse(localStorage.getItem('info')).level
 let playerATK = JSON.parse(localStorage.getItem('info')).sRPGatk + 5 * level
 let playerDEF = JSON.parse(localStorage.getItem('info')).sRPGdef + 3 * level
 let playerHP = JSON.parse(localStorage.getItem('info')).sRPGhp + 7 * level
-let exp = JSON.parse(localStorage.getItem('info')).exp
-let currentEXP = exp
+
+
 let currentLEVEL = level
 
 const userN = JSON.parse(localStorage.getItem('info')).username
@@ -51,7 +51,7 @@ function setupMonster() {
 }
 
 function setupPlayer() {
-    infoPlayer.innerHTML = ` <div style="font-size:17.5px"> <b> ${JSON.parse(localStorage.getItem('info')).name} </b> </div> <div style="margin-left: 20px"> Tấn Công:  ${playerATK} <br>Phòng Ngự: ${playerDEF}<br>HP: ${currentPlayerHP}/${playerHP} </div>`
+    infoPlayer.innerHTML = ` <div style="font-size:17.5px"> <b> ${JSON.parse(localStorage.getItem('info')).name} </b> </div> <div style="margin-left: 20px"> Level: ${currentLEVEL} <br> Tấn Công:  ${playerATK} <br>Phòng Ngự: ${playerDEF}<br>HP: ${currentPlayerHP}/${playerHP} </div>`
 }
 
 const btnATK = document.getElementById("btn_ATK")
@@ -80,11 +80,12 @@ replayDiv.addEventListener('click', () => {
     // playerHP = JSON.parse(localStorage.getItem('info')).sRPGhp
     infoLastATK.innerText = ""
     infoMon.innerHTML = `<div style="font-size: 19px"> Một con ${monName} đã xuất hiện. Chiến đấu thôi! </div>` + ` <div style="font-size:17.5px"> <b> ${monName} </b> </div> <div style="margin-left: 20px"> Tấn Công:  ${monATK} <br>Phòng Ngự: ${monDEF}<br>HP: ${monCurrentHP}/${monHP} </div>`
-    infoPlayer.innerHTML = ` <div style="font-size:17.5px"> <b> ${JSON.parse(localStorage.getItem('info')).name} </b> </div> <div style="margin-left: 20px"> Tấn Công:  ${playerATK} <br>Phòng Ngự: ${playerDEF}<br>HP: ${currentPlayerHP}/${playerHP} </div>`
+    infoPlayer.innerHTML = ` <div style="font-size:17.5px"> <b> ${JSON.parse(localStorage.getItem('info')).name} </b> </div> <div style="margin-left: 20px"> Level: ${currentLEVEL} <br> Tấn Công:  ${playerATK} <br>Phòng Ngự: ${playerDEF}<br>HP: ${currentPlayerHP}/${playerHP} </div>`
     currentPlayerBar.style.width = `100%`
     currentMonBar.style.width = `100%`
 })
 
+let exp = 0
 let id = 0
 async function checkID() {
     const myJSON = await getAPILogin()
@@ -93,7 +94,9 @@ async function checkID() {
             id = i + 1
         }
     }
+    exp = myJSON[id]["exp"]
 }
+let currentEXP = exp
 
 btnATK.addEventListener('click', () => {
     let monDMG = Math.floor((monATK - playerDEF * (0.1 + Math.round(Math.random()))))
@@ -151,7 +154,7 @@ btnHeal.addEventListener('click', () => {
     }
     let percentPlayerHP = (currentPlayerHP / playerHP) * 100
     currentPlayerBar.style.width = `${percentPlayerHP}%`
-    infoPlayer.innerHTML = ` <div style="font-size:17.5px"> <b> ${JSON.parse(localStorage.getItem('info')).name} </b> </div> <div style="margin-left: 20px"> Tấn Công:  ${playerATK} <br>Phòng Ngự: ${playerDEF}<br>HP: ${currentPlayerHP}/${playerHP} </div>`
+    infoPlayer.innerHTML = ` <div style="font-size:17.5px"> <b> ${JSON.parse(localStorage.getItem('info')).name} </b> </div> <div style="margin-left: 20px"> Level: ${currentLEVEL} <br> Tấn Công:  ${playerATK} <br>Phòng Ngự: ${playerDEF}<br>HP: ${currentPlayerHP}/${playerHP} </div>`
 })
 
 //Gọi API để get thông tin
